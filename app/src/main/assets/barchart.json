@@ -1,0 +1,32 @@
+[
+  {
+    "id_dosen": "3",
+    "id_matkul": "2",
+    "nilai": "1",
+    "jumlah": "18"
+  },
+  {
+    "id_dosen": "3",
+    "id_matkul": "2",
+    "nilai": "2",
+    "jumlah": "2"
+  },
+  {
+    "id_dosen": "3",
+    "id_matkul": "2",
+    "nilai": "3",
+    "jumlah": "7"
+  },
+  {
+    "id_dosen": "3",
+    "id_matkul": "2",
+    "nilai": "4",
+    "jumlah": "6"
+  },
+  {
+    "id_dosen": "3",
+    "id_matkul": "2",
+    "nilai": "5",
+    "jumlah": "3"
+  }
+]

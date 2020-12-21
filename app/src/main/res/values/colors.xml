@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="green">#06B90E</color>
+    <color name="yellow">#F8E42F</color>
+    <color name="blue">#1173E0</color>
+    <color name="lightorange">#FA933E</color>
+    <color name="black">#0A0A0A</color>
+    <color name="white">#FFFFFF</color>
+    <color name="grey">#7E7272</color>
+    <color name="red">#F80000</color>
+    <color name="orange">#FF8018</color>
+    <color name="lightblue">#76C9EE</color>
+    <color name="progressbar">#DAE2DB</color>
+    <color name="active_dots">#1A84FE</color>
+    <color name="inactive_dots">#696969</color>
+    <color name="trans">#00000000</color>
+
+</resources>

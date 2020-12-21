@@ -1,0 +1,45 @@
+{"Maps":[{
+  "pincode":"560010",
+  "name":"Ram",
+  "address":"rajajinagar",
+  "city": "Bengaluru",
+  "latitude": "12.98523012695637",
+  "longitude": "77.55614407360554",
+  "image":"https://cdn.pixabay.com/photo/2018/01/21/01/46/architecture-3095716_960_720.jpg"
+},
+  {
+    "pincode":"560010",
+    "name":"Raj",
+    "address":"jayannagar",
+    "city": "Bengaluru",
+    "latitude": "12.992865045949536",
+    "longitude": "77.56421886384487",
+    "image":"sortdown"
+  },
+  {
+    "pincode":"560010",
+    "name":"Arjun",
+    "address":"jayannagar",
+    "city": "Bengaluru",
+    "latitude": "12.980985572439561",
+    "longitude": "77.56050635129213",
+    "image":"sortdown.png"
+  },
+  {
+    "pincode":"560010",
+    "name":"Bhim",
+    "address":"jayannagar",
+    "city": "Bengaluru",
+    "latitude": "12.99317605692999",
+    "longitude": "77.5539319217205",
+    "image":"R.drawable.sortdown"
+  },
+  {
+    "pincode":"560010",
+    "name":"Sam",
+    "address":"jayannagar",
+    "city": "Bengaluru",
+    "latitude": "12.981947072320644",
+    "longitude": "77.63504963368177",
+    "image":"app/res/drawable/sortdown.png"
+  }]}
