@@ -151,6 +151,31 @@
 
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/diffrence"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="Diffrence" />
+
+<!--            <Button-->
+<!--                android:id="@+id/piechart"-->
+<!--                android:layout_width="130dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--                android:text="Pie Chart" />-->
+
+        </LinearLayout>
+
+
 
     </LinearLayout>
 
