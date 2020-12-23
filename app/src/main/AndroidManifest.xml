@@ -31,7 +31,9 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".DiffrenceLayoutActivity"></activity>
+        <activity android:name=".LinearLayoutActivity"></activity>
+        <activity android:name=".ConstraintLayoutActivity" />
+        <activity android:name=".DiffrenceLayoutActivity" />
         <activity android:name=".AutoCompleteMapActivity" />
         <activity android:name=".MapSearchActivity" />
         <activity android:name=".MapsActivity" />
