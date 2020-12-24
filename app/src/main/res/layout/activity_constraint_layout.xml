@@ -27,101 +27,183 @@
             android:textStyle="bold" />
     </androidx.appcompat.widget.Toolbar>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_marginTop="60dp">
 
+    <Button
+        android:id="@+id/buttonsig"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="nanocart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.0" />
 
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="130dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Full Address" />
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Pincode"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonsig"
+        app:layout_constraintVertical_bias="0.078" />
 
-            <Button
-                android:id="@+id/buttonnext"
-                android:layout_width="130dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Pincode" />
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Maps"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button3"
+        app:layout_constraintVertical_bias="0.055" />
 
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Pagenation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button4"
+        app:layout_constraintVertical_bias="0.099" />
 
-            <Button
-                android:id="@+id/buttonlocation"
-                android:layout_width="130dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Maps" />
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Share"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button5"
+        app:layout_constraintVertical_bias="0.101" />
 
-            <Button
-                android:id="@+id/buttonpagenation"
-                android:layout_width="130dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Pagenation" />
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Image"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button6"
+        app:layout_constraintVertical_bias="0.116" />
 
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Cart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button7"
+        app:layout_constraintVertical_bias="0.128" />
 
-            <Button
-                android:id="@+id/buttonshare"
-                android:layout_width="130dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Share" />
+    <!--    <Button-->
+<!--        android:id="@+id/button9"-->
+<!--        android:layout_width="130dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="8dp"-->
+<!--        android:layout_marginEnd="8dp"-->
+<!--        android:layout_marginBottom="8dp"-->
+<!--        android:text="Filter Search"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.501"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/button8"-->
+<!--        app:layout_constraintVertical_bias="0.0" />-->
 
-            <Button
-                android:id="@+id/buttonimage"
-                android:layout_width="130dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Image" />
+<!--    <Button-->
+<!--        android:id="@+id/button10"-->
+<!--        android:layout_width="130dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="8dp"-->
+<!--        android:layout_marginEnd="8dp"-->
+<!--        android:layout_marginBottom="8dp"-->
+<!--        android:text="Bar Chart"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.501"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/button9"-->
+<!--        app:layout_constraintVertical_bias="0.0" />-->
 
+<!--    <Button-->
+<!--        android:id="@+id/button12"-->
+<!--        android:layout_width="130dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="8dp"-->
+<!--        android:layout_marginEnd="8dp"-->
+<!--        android:layout_marginBottom="8dp"-->
+<!--        android:text="Pie Chart"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/button10"-->
+<!--        app:layout_constraintVertical_bias="0.0" />-->
 
+<!--    <Button-->
+<!--        android:id="@+id/button13"-->
+<!--        android:layout_width="130dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="8dp"-->
+<!--        android:layout_marginEnd="8dp"-->
+<!--        android:layout_marginBottom="8dp"-->
+<!--        android:text="Last "-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/button12"-->
+<!--        app:layout_constraintVertical_bias="0.0" />-->
 
-            <Button
-                android:id="@+id/cart"
-                android:layout_width="130dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Cart" />
-
-            <Button
-                android:id="@+id/filetrsearch"
-                android:layout_width="130dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Filter Search" />
-
-
-            <Button
-                android:id="@+id/barchart"
-                android:layout_width="130dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Bar Chart" />
-
-            <Button
-                android:id="@+id/piechart"
-                android:layout_width="130dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Pie Chart" />
-
-
-
-            <Button
-                android:id="@+id/diffrence"
-                android:layout_width="130dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Diffrence" />
-
-
-        </LinearLayout>
-
-
+<!--    <Button-->
+<!--        android:layout_width="130dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="8dp"-->
+<!--        android:layout_marginEnd="8dp"-->
+<!--        android:layout_marginBottom="8dp"-->
+<!--        android:text="Last "-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.501"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/button13"-->
+<!--        app:layout_constraintVertical_bias="0.0" />-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
