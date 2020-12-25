@@ -31,7 +31,7 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".SignupActivity"></activity>
+        <activity android:name=".SignupActivity" />
         <activity android:name=".LinearLayoutActivity" />
         <activity android:name=".ConstraintLayoutActivity" />
         <activity android:name=".DiffrenceLayoutActivity" />
