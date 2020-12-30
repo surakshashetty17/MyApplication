@@ -31,6 +31,8 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".BusinessDetailsActivity"></activity>
+        <activity android:name=".SpinnerCheckboxActivity" />
         <activity android:name=".SignupActivity" />
         <activity android:name=".LinearLayoutActivity" />
         <activity android:name=".ConstraintLayoutActivity" />

@@ -2,9 +2,11 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
@@ -13,6 +15,7 @@ public class SignupActivity extends AppCompatActivity {
     EditText Password, ReenterPass;
     ImageButton img1, img2;  //  password eye
     private int passwordNotVisible = 1;
+    Button register;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,6 +56,15 @@ public class SignupActivity extends AppCompatActivity {
 
                 ReenterPass.setSelection(ReenterPass.length());
 
+            }
+        });
+
+        register = (Button)findViewById(R.id.regNow);
+        register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(SignupActivity.this,BusinessDetailsActivity.class);
+                startActivity(i);
             }
         });
 

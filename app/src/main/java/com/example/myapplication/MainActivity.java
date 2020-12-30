@@ -28,7 +28,7 @@ import com.google.android.gms.tasks.Task;
 public class MainActivity extends AppCompatActivity {
 
 
-    Button button,button1,buttonlocation,buttonpagenation,buttonshare,buttonimage,buttoncart,buttonfiltersearch,buttonchart,buttonpiechart,buttondiffrece;
+    Button button,button1,buttonlocation,buttonpagenation,buttonshare,buttonimage,buttoncart,buttonfiltersearch,buttonchart,buttonpiechart,buttondiffrece,buttonnanocart;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -122,6 +122,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this,DiffrenceLayoutActivity.class);
+                startActivity(i);
+            }
+        });
+        buttonnanocart = (Button)findViewById(R.id.nanocart);
+        buttonnanocart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this,SignupActivity.class);
                 startActivity(i);
             }
         });

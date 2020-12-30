@@ -166,12 +166,12 @@
                 android:layout_marginRight="10dp"
                 android:text="Diffrence" />
 
-<!--            <Button-->
-<!--                android:id="@+id/piechart"-->
-<!--                android:layout_width="130dp"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginLeft="10dp"-->
-<!--                android:text="Pie Chart" />-->
+            <Button
+                android:id="@+id/nanocart"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="nanocart" />
 
         </LinearLayout>
 

@@ -17,5 +17,7 @@
     <color name="active_dots">#1A84FE</color>
     <color name="inactive_dots">#696969</color>
     <color name="trans">#00000000</color>
+    <color name="gree">#9BDD45</color>
+
 
 </resources>
