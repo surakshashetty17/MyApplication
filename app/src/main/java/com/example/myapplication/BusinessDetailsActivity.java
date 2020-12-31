@@ -3,16 +3,19 @@ package com.example.myapplication;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.Spinner;
 
 public class BusinessDetailsActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     CheckBox checkBox1,checkBox2,checkBox3,checkBox4,checkBox5,checkBox6,checkBox7;
+    Button save_changes;
     String[] start_time = { "4AM", "5AM", "6AM", "7AM", "8AM", "9AM", "10AM", "11AM", "12AM", "1PM", "2PM", "3PM", "4PM", "5PM", "6PM", "7PM", "8PM", "9PM", "10PM", "11PM", "12AM"};
     String[] stop_time = { "4AM", "5AM", "6AM", "7AM", "8AM", "9AM", "10AM", "11AM", "12AM", "1PM", "2PM", "3PM", "4PM", "5PM", "6PM", "7PM", "8PM", "9PM", "10PM", "11PM", "12AM"};
     @Override
@@ -52,6 +55,14 @@ public class BusinessDetailsActivity extends AppCompatActivity implements Adapte
         //Setting the ArrayAdapter data on the Spinner
         spin1.setAdapter(aa1);
 
+        save_changes = (Button)findViewById(R.id.save_changes);
+        save_changes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(BusinessDetailsActivity.this,SpinnerCheckboxActivity.class);
+                startActivity(i);
+            }
+        });
     }
 
     @Override
