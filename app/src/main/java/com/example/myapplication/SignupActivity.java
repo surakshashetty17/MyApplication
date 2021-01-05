@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 public class SignupActivity extends AppCompatActivity {
 
@@ -16,6 +17,8 @@ public class SignupActivity extends AppCompatActivity {
     ImageButton img1, img2;  //  password eye
     private int passwordNotVisible = 1;
     Button register;
+    TextView login;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -68,6 +71,15 @@ public class SignupActivity extends AppCompatActivity {
             }
         });
 
+
+        login = (TextView) findViewById(R.id.reglog);
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(SignupActivity.this,SignInActivity.class);
+                startActivity(i);
+            }
+        });
 
     }
 
