@@ -16,4 +16,10 @@
 <!--            <item name="android:maxHeight">30dip</item>-->
         </style>
 
+
+    <style name="MyCheckBox" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorControlNormal">#000</item>   <!-- normal border color change as you wish -->
+        <item name="colorControlActivated">#5DBBE2</item> <!-- activated color change as you wish -->
+    </style>
+
 </resources>

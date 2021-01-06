@@ -189,7 +189,9 @@
                         android:layout_height="wrap_content"
                         android:text="Saturday"
                         android:textSize="16sp"
-                        android:background="@drawable/edittext"/>
+                        android:background="@drawable/edit_blue"
+                        android:buttonTint="@color/white"
+                        android:textColor="@color/white"/>
 
                     <CheckBox
                         android:id="@+id/checkBox2"
@@ -197,7 +199,8 @@
                         android:layout_height="wrap_content"
                         android:text="Sunday"
                         android:textSize="16sp"
-                        android:background="@drawable/edittext"/>
+                        android:background="@drawable/edittext"
+                        android:buttonTint="#5DBBE2"/>
 
                     <CheckBox
                         android:id="@+id/checkBox3"
@@ -205,7 +208,9 @@
                         android:layout_height="wrap_content"
                         android:text=" Monday"
                         android:textSize="16sp"
-                        android:background="@drawable/edittext"/>
+                        android:background="@drawable/edittext"
+                        android:textColor="@color/black"
+                        android:theme="@style/MyCheckBox"/>
 
                 </LinearLayout>
 
@@ -272,16 +277,23 @@
                             android:layout_height="40dp"
                             android:fontFamily="@font/roboto"
                             android:spinnerMode="dropdown"
-                            android:background="@drawable/buttonspinner"/>
+                            android:background="@drawable/buttonspinner1" />
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:text="-"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center"/>
 
-                        <androidx.appcompat.widget.AppCompatSpinner
+                    <androidx.appcompat.widget.AppCompatSpinner
                             android:id="@+id/spinner2"
                             android:layout_width="160dp"
                             android:layout_height="40dp"
                             android:fontFamily="@font/roboto"
                             android:spinnerMode="dropdown"
-                            android:layout_marginLeft="20dp"
+                            android:layout_marginLeft="10dp"
                             android:background="@drawable/buttonspinner"/>
 
 <!--                    <Spinner-->
