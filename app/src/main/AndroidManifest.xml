@@ -31,7 +31,8 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".SignInActivity"></activity>
+        <activity android:name=".PersonalDetailsActivity"></activity>
+        <activity android:name=".SignInActivity" />
         <activity android:name=".ChangePasswordActivity" />
         <activity android:name=".BusinessDetailsActivity" />
         <activity android:name=".SpinnerCheckboxActivity" />
