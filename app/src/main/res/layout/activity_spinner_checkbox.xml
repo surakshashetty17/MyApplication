@@ -70,11 +70,12 @@
 
         <ImageView
             android:id="@+id/imageViewphoto1"
-            android:layout_width="200dp"
+            android:layout_width="250dp"
             android:layout_height="150dp"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="5dp"
-            android:background="@drawable/cart_sample"/>
+            android:background="@drawable/edit_image"
+            android:scaleType="fitXY" />
 
 
         <TextView
@@ -111,11 +112,12 @@
 
         <ImageView
             android:id="@+id/imageViewphoto2"
-            android:layout_width="200dp"
+            android:layout_width="250dp"
             android:layout_height="150dp"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="5dp"
-            android:background="@drawable/cart_sample"/>
+            android:background="@drawable/edit_image"
+            android:scaleType="fitXY"/>
 
 
         <View
@@ -199,11 +201,12 @@
 
         <ImageView
             android:id="@+id/imageViewphoto3"
-            android:layout_width="200dp"
+            android:layout_width="250dp"
             android:layout_height="150dp"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="5dp"
-            android:background="@drawable/cart_sample"/>
+            android:background="@drawable/edit_image"
+            android:scaleType="fitXY"/>
 
         <View
             android:layout_width="match_parent"
@@ -285,11 +288,12 @@
 
         <ImageView
             android:id="@+id/imageViewphoto4"
-            android:layout_width="200dp"
+            android:layout_width="250dp"
             android:layout_height="150dp"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="5dp"
-            android:background="@drawable/cart_sample"/>
+            android:background="@drawable/edit_image"
+            android:scaleType="fitXY"/>
 
         <Button
             android:id="@+id/save_changes"
