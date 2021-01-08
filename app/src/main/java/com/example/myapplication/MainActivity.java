@@ -28,7 +28,7 @@ import com.google.android.gms.tasks.Task;
 public class MainActivity extends AppCompatActivity {
 
 
-    Button button,button1,buttonlocation,buttonpagenation,buttonshare,buttonimage,buttoncart,buttonfiltersearch,buttonchart,buttonpiechart,buttondiffrece,buttonnanocart;
+    Button button,button1,buttondash1,buttondash2,buttonlocation,buttonpagenation,buttonshare,buttonimage,buttoncart,buttonfiltersearch,buttonchart,buttonpiechart,buttondiffrece,buttonnanocart;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -130,6 +130,22 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this,SignupActivity.class);
+                startActivity(i);
+            }
+        });
+        buttondash1 = (Button)findViewById(R.id.dash1);
+        buttondash1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this,DashBoardActivity.class);
+                startActivity(i);
+            }
+        });
+        buttondash2 = (Button)findViewById(R.id.dash2);
+        buttondash2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this,DashLayoutActivity.class);
                 startActivity(i);
             }
         });

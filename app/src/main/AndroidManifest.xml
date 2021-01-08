@@ -31,7 +31,10 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".PersonalDetailsActivity"></activity>
+        <activity android:name=".DashLandingActivity"></activity>
+        <activity android:name=".DashLayoutActivity" />
+        <activity android:name=".DashBoardActivity" />
+        <activity android:name=".PersonalDetailsActivity" />
         <activity android:name=".SignInActivity" />
         <activity android:name=".ChangePasswordActivity" />
         <activity android:name=".BusinessDetailsActivity" />
