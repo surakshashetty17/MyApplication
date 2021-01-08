@@ -9,7 +9,9 @@
     <color name="lightorange">#FA933E</color>
     <color name="black">#0A0A0A</color>
     <color name="white">#FFFFFF</color>
+    <color name="white1">#F7F2F2</color>
     <color name="grey">#7E7272</color>
+    <color name="light_grey">#B4A4A4</color>
     <color name="red">#F80000</color>
     <color name="orange">#FF8018</color>
     <color name="lightblue">#76C9EE</color>
@@ -18,6 +20,13 @@
     <color name="inactive_dots">#696969</color>
     <color name="trans">#00000000</color>
     <color name="gree">#9BDD45</color>
+    <color name="light_black">#312D2D</color>
+    <color name="light1_black">#221B1B</color>
+    <color name="lavedor">#6B7BD8</color>
+    <color name="dark_blue">#030650</color>
+
+
+
 
 
 </resources>
