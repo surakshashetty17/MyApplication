@@ -31,7 +31,11 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".DashLandingActivity"></activity>
+        <activity android:name=".BankDetailsActivity"></activity>
+        <activity android:name=".MyAccountLinearActivity" />
+        <activity android:name=".PincodeEnableActivity" />
+        <activity android:name=".MyAccountActivity" />
+        <activity android:name=".DashLandingActivity" />
         <activity android:name=".DashLayoutActivity" />
         <activity android:name=".DashBoardActivity" />
         <activity android:name=".PersonalDetailsActivity" />

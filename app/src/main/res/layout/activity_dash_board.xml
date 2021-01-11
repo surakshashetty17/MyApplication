@@ -103,6 +103,7 @@
 
                 </androidx.cardview.widget.CardView>
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/cardview_myaccount"
                     android:layout_width="125dp"
                     android:layout_height="125dp"
                     android:layout_marginLeft="5dp"
