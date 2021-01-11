@@ -61,14 +61,14 @@ public class MyAccountActivity extends AppCompatActivity {
             }
         });
 
-        linear_bank = (LinearLayout) findViewById(R.id.linear_bankdetails);
-        linear_bank.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(MyAccountActivity.this,BankDetailsActivity.class);
-                startActivity(i);
-            }
-        });
+//        linear_bank = (LinearLayout) findViewById(R.id.linear_bankdetails);
+//        linear_bank.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent i = new Intent(MyAccountActivity.this,BankDetailsActivity.class);
+//                startActivity(i);
+//            }
+//        });
 
         linear_pincode = (LinearLayout) findViewById(R.id.linear_pincodeenabled);
         linear_pincode.setOnClickListener(new View.OnClickListener() {
