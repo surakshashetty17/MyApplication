@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BankDetailsActivity">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:minHeight="?attr/actionBarSize"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark"
+            tools:ignore="MissingConstraints"
+            android:backgroundTint="@color/lightblue"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="-5dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:text="KYC and Bank Details"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:text="Business Pan (Optional)"/>
+
+            <EditText
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:ems="10"
+                android:fontFamily="@font/roboto"
+                android:inputType="textPersonName"
+                android:paddingLeft="6dp"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/edittext"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="20dp"
+                android:text="CIN (Optional)" />
+
+            <EditText
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:ems="10"
+                android:fontFamily="@font/roboto"
+                android:inputType="textPersonName"
+                android:paddingLeft="6dp"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_marginLeft="5dp"/>
+
+
+            <!--                <TextView-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="20dp"-->
+            <!--                android:layout_marginLeft="5dp"-->
+            <!--                android:layout_marginTop="20dp"-->
+            <!--                android:text="Bank UPI ID (Optional)" />-->
+
+            <!--            <EditText-->
+            <!--                android:layout_width="300dp"-->
+            <!--                android:layout_height="40dp"-->
+            <!--                android:ems="10"-->
+            <!--                android:fontFamily="@font/roboto"-->
+            <!--                android:inputType="textPersonName"-->
+            <!--                android:paddingLeft="6dp"-->
+            <!--                android:textColor="@color/black"-->
+            <!--                android:textSize="18sp"-->
+            <!--                android:layout_marginLeft="5dp"/>-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:hint="Bank UPI ID (Optional)"
+                app:hintTextColor="@color/lightblue"
+                android:layout_marginLeft="5dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/EditTextTheme"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="20dp"
+                android:text="GSTIN (Optional)" />
+
+            <EditText
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:ems="10"
+                android:fontFamily="@font/roboto"
+                android:inputType="textPersonName"
+                android:paddingLeft="6dp"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_marginLeft="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="20dp"
+                android:text="Bank Account Number" />
+
+            <EditText
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:ems="10"
+                android:fontFamily="@font/roboto"
+                android:inputType="textPersonName"
+                android:paddingLeft="6dp"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_marginLeft="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="20dp"
+                android:text="Beneficiary Name" />
+
+            <EditText
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:ems="10"
+                android:fontFamily="@font/roboto"
+                android:inputType="textPersonName"
+                android:paddingLeft="6dp"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_marginLeft="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="20dp"
+                android:text="Branch IFSC Code" />
+
+            <EditText
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:ems="10"
+                android:fontFamily="@font/roboto"
+                android:inputType="textPersonName"
+                android:paddingLeft="6dp"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_marginLeft="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="20dp"
+                android:text="Bank Name" />
+
+            <EditText
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:ems="10"
+                android:fontFamily="@font/roboto"
+                android:inputType="textPersonName"
+                android:paddingLeft="6dp"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_marginLeft="5dp"/>
+
+            <Button
+                android:id="@+id/upload"
+                android:layout_width="180dp"
+                android:layout_height="40dp"
+                android:fontFamily="@font/roboto"
+                android:background="@drawable/button_upload"
+                android:text="Upload Files"
+                android:textColor="#fff"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="5dp"/>
+
+
+            <Button
+                android:id="@+id/save_changes"
+                android:layout_width="160dp"
+                android:layout_height="40dp"
+                android:background="@color/green"
+                android:fontFamily="@font/roboto"
+                android:text="Save Changes"
+                android:textColor="#fff"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="5dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

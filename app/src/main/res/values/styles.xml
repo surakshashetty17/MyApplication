@@ -22,4 +22,9 @@
         <item name="colorControlActivated">#5DBBE2</item> <!-- activated color change as you wish -->
     </style>
 
+    <style name="EditTextTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorControlNormal">@color/grey</item>
+        <item name="colorControlActivated">@color/lightblue</item>
+        <item name="colorControlHighlight">@color/grey</item>
+    </style>
 </resources>

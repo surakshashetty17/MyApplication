@@ -31,7 +31,10 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".BankDetailsActivity"></activity>
+        <activity android:name=".UploadGstActivity"></activity>
+        <activity android:name=".GST_CertificateActivity" />
+        <activity android:name=".UploadActivity" />
+        <activity android:name=".BankDetailsActivity" />
         <activity android:name=".MyAccountLinearActivity" />
         <activity android:name=".PincodeEnableActivity" />
         <activity android:name=".MyAccountActivity" />
