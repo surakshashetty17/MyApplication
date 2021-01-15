@@ -24,8 +24,8 @@ public class SignupActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
 
-        Password = (EditText) findViewById(R.id.regPass);
-        ReenterPass = (EditText) findViewById(R.id.regRepass);
+        Password = (EditText) findViewById(R.id.reg_pass);
+        ReenterPass = (EditText) findViewById(R.id.reg_repass);
         img1 = (ImageButton) findViewById(R.id.imageButton1);
         img2 = (ImageButton) findViewById(R.id.imageButton2);
 

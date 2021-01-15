@@ -39,7 +39,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/regName"
+        android:id="@+id/reg_shopname"
         android:layout_width="300dp"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
@@ -64,7 +64,7 @@
 
 
     <EditText
-        android:id="@+id/regmob"
+        android:id="@+id/reg_username"
         android:layout_width="300dp"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
@@ -83,12 +83,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.500"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/regName"
+        app:layout_constraintTop_toBottomOf="@+id/reg_shopname"
         app:layout_constraintVertical_bias="0.0" />
 
 
     <EditText
-        android:id="@+id/shop"
+        android:id="@+id/reg_email"
         android:layout_width="300dp"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
@@ -107,11 +107,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/regmob"
+        app:layout_constraintTop_toBottomOf="@+id/reg_username"
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/pincode"
+        android:id="@+id/reg_mobilenumber"
         android:layout_width="300dp"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
@@ -130,11 +130,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/shop"
+        app:layout_constraintTop_toBottomOf="@+id/reg_email"
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/regEmail"
+        android:id="@+id/reg_pincode"
         android:layout_width="300dp"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
@@ -154,11 +154,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.500"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pincode"
+        app:layout_constraintTop_toBottomOf="@+id/reg_mobilenumber"
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/regPass"
+        android:id="@+id/reg_pass"
         android:layout_width="300dp"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
@@ -177,11 +177,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/regEmail"
+        app:layout_constraintTop_toBottomOf="@+id/reg_pincode"
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/regRepass"
+        android:id="@+id/reg_repass"
         android:layout_width="300dp"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
@@ -201,7 +201,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.500"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/regPass"
+        app:layout_constraintTop_toBottomOf="@+id/reg_pass"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
@@ -222,7 +222,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/regRepass"
+        app:layout_constraintTop_toBottomOf="@+id/reg_repass"
         app:layout_constraintVertical_bias="0.0" />
 
     <View
@@ -284,11 +284,11 @@
         android:background="@null"
         android:foregroundGravity="center"
         android:gravity="center_horizontal|top"
-        app:layout_constraintBottom_toBottomOf="@+id/regPass"
-        app:layout_constraintEnd_toEndOf="@+id/regPass"
+        app:layout_constraintBottom_toBottomOf="@+id/reg_pass"
+        app:layout_constraintEnd_toEndOf="@+id/reg_pass"
         app:layout_constraintHorizontal_bias="0.981"
-        app:layout_constraintStart_toStartOf="@+id/regPass"
-        app:layout_constraintTop_toTopOf="@+id/regPass"
+        app:layout_constraintStart_toStartOf="@+id/reg_pass"
+        app:layout_constraintTop_toTopOf="@+id/reg_pass"
         app:srcCompat="@drawable/eye_pwd"
         tools:ignore="MissingConstraints" />
 
@@ -299,11 +299,11 @@
         android:background="@null"
         android:foregroundGravity="center"
         android:gravity="center_horizontal|top"
-        app:layout_constraintBottom_toBottomOf="@+id/regRepass"
-        app:layout_constraintEnd_toEndOf="@+id/regRepass"
+        app:layout_constraintBottom_toBottomOf="@+id/reg_repass"
+        app:layout_constraintEnd_toEndOf="@+id/reg_repass"
         app:layout_constraintHorizontal_bias="0.977"
-        app:layout_constraintStart_toStartOf="@+id/regRepass"
-        app:layout_constraintTop_toTopOf="@+id/regRepass"
+        app:layout_constraintStart_toStartOf="@+id/reg_repass"
+        app:layout_constraintTop_toTopOf="@+id/reg_repass"
         app:srcCompat="@drawable/eye_pwd"
         tools:ignore="MissingConstraints" />
 

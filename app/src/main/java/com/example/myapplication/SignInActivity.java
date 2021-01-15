@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 public class SignInActivity extends AppCompatActivity {
 
-    TextView forget_password;
+    TextView forget_password,join_now;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,6 +18,14 @@ public class SignInActivity extends AppCompatActivity {
 
         forget_password = (TextView) findViewById(R.id.forgot_password);
         forget_password.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(SignInActivity.this,ChangePasswordActivity.class);
+                startActivity(i);
+            }
+        });
+        join_now = (TextView) findViewById(R.id.join_now);
+        join_now.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(SignInActivity.this,ChangePasswordActivity.class);

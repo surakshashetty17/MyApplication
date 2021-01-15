@@ -31,7 +31,9 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".UploadGstActivity"></activity>
+        <activity android:name=".UploadIdActivity"></activity>
+        <activity android:name=".OwnerIdActivity" />
+        <activity android:name=".UploadGstActivity" />
         <activity android:name=".GST_CertificateActivity" />
         <activity android:name=".UploadActivity" />
         <activity android:name=".BankDetailsActivity" />
