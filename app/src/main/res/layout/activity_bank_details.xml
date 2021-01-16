@@ -10,11 +10,10 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/white"
+            android:background="@color/lightblue"
             android:minHeight="?attr/actionBarSize"
             app:theme="@style/ThemeOverlay.AppCompat.Dark"
             tools:ignore="MissingConstraints"
-            android:backgroundTint="@color/lightblue"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="-5dp">
 
@@ -24,7 +23,7 @@
                 android:fontFamily="@font/roboto"
                 android:text="KYC and Bank Details"
                 android:textColor="@color/black"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:textStyle="bold" />
         </androidx.appcompat.widget.Toolbar>
 
