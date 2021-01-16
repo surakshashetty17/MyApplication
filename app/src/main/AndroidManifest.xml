@@ -31,7 +31,14 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".UploadIdActivity"></activity>
+        <activity android:name=".ImageActivity"></activity>
+        <activity android:name=".OrderCompDetailActivity" />
+        <activity android:name=".OrdersOthersActivity" />
+        <activity android:name=".OrdersCompleteActivity" />
+        <activity android:name=".OrdersActivity" />
+        <activity android:name=".ProfilePicActivity" />
+        <activity android:name=".FranchisePremiumActivity" />
+        <activity android:name=".UploadIdActivity" />
         <activity android:name=".OwnerIdActivity" />
         <activity android:name=".UploadGstActivity" />
         <activity android:name=".GST_CertificateActivity" />
