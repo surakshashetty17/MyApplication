@@ -196,7 +196,7 @@
                 <TextView
                     android:layout_width="80dp"
                     android:layout_height="35dp"
-                    android:text="Franchise Premium"
+                    android:text="Upgrade to Premium"
                     android:textStyle="normal"
                     android:layout_marginTop="8dp"
                     android:gravity="center"/>

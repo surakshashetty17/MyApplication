@@ -75,7 +75,7 @@ public class MyAccountActivity extends AppCompatActivity {
         linear_franchise.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MyAccountActivity.this,FranchisePremiumActivity.class);
+                Intent i = new Intent(MyAccountActivity.this,VendorPremiumActivity.class);
                 startActivity(i);
             }
         });
