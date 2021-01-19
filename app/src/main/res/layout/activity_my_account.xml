@@ -299,13 +299,14 @@
                 android:gravity="center"
                 android:layout_gravity="center"
                 android:background="@drawable/edittext"
-                android:padding="10dp">
+                android:padding="10dp"
+                android:layout_marginRight="5dp">
 
                 <ImageView
-                    android:layout_width="50dp"
+                    android:layout_width="57dp"
                     android:layout_height="50dp"
-                    android:background="@drawable/order"
-                    android:layout_gravity="center"/>
+                    android:layout_gravity="center"
+                    android:background="@drawable/order" />
                 <TextView
                     android:layout_width="80dp"
                     android:layout_height="35dp"
@@ -314,6 +315,30 @@
                     android:layout_marginTop="8dp"
                     android:gravity="center"/>
             </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linear_gallery"
+                android:layout_width="115dp"
+                android:layout_height="115dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:background="@drawable/edittext"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/profile_pic"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="35dp"
+                    android:text="Gallery Images"
+                    android:textStyle="normal"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"/>
+            </LinearLayout>
+
         </LinearLayout>
 
     </LinearLayout>

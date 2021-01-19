@@ -10,7 +10,7 @@ import android.widget.LinearLayout;
 
 public class MyAccountActivity extends AppCompatActivity {
 
-    LinearLayout linear_personal,linear_business,linear_banner,linear_currentlocation,linear_bank,linear_franchise,linear_password,linear_pincode,linear_profile,linear_order;
+    LinearLayout linear_personal,linear_business,linear_banner,linear_currentlocation,linear_bank,linear_franchise,linear_password,linear_pincode,linear_profile,linear_order,linear_gallery;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -112,6 +112,15 @@ public class MyAccountActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(MyAccountActivity.this,OrdersActivity.class);
+                startActivity(i);
+            }
+        });
+
+        linear_gallery = (LinearLayout) findViewById(R.id.linear_gallery);
+        linear_gallery.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MyAccountActivity.this,GalleryImagesActivity.class);
                 startActivity(i);
             }
         });
