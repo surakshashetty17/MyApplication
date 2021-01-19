@@ -18,7 +18,6 @@ public class GalleryImagesActivity extends AppCompatActivity {
 
     TextView button_uploadphotos;
     ImageView imageViewphoto1,imageViewphoto2;
-    private static final int PICK_IMAGE = 100;
     Uri imageUri;
     private static final int SELECT_FILE1 = 1;
     private static final int SELECT_FILE2 = 2;
