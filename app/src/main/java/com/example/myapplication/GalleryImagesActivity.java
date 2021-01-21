@@ -164,10 +164,12 @@ public class GalleryImagesActivity extends AppCompatActivity {
     }
 
     public void choosePhotoFromGallary() {
-        Intent galleryIntent = new Intent();
-//        galleryIntent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true);
-        galleryIntent.setType("image/*");
-        galleryIntent.setAction(Intent.ACTION_GET_CONTENT);
+//        Intent galleryIntent = new Intent();
+        Intent galleryIntent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+
+//        galleryIntent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true);  //for selecting multiple images from gallery
+//        galleryIntent.setType("image/*");
+//        galleryIntent.setAction(Intent.ACTION_GET_CONTENT);
         startActivityForResult(galleryIntent, GALLERY);
     }
 
@@ -214,7 +216,7 @@ public class GalleryImagesActivity extends AppCompatActivity {
                     }
                     text_gallery.setText(count+" image uploaded");
                     saveImage(thumbnail);
-                    Toast.makeText(GalleryImagesActivity.this, "Image Saved", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(GalleryImagesActivity.this, "Image uploaded successfully!", Toast.LENGTH_SHORT).show();
                 }
                 break;
             case 2:
@@ -247,7 +249,7 @@ public class GalleryImagesActivity extends AppCompatActivity {
                     }
                     text_gallery.setText(count+" image uploaded");
                     saveImage(thumbnail);
-                    Toast.makeText(GalleryImagesActivity.this, "Image Saved!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(GalleryImagesActivity.this, "Image uploaded successfully!", Toast.LENGTH_SHORT).show();
                 }
                 break;
             case 3:
@@ -280,7 +282,7 @@ public class GalleryImagesActivity extends AppCompatActivity {
                     }
                     text_gallery.setText(count+" image uploaded");
                     saveImage(thumbnail);
-                    Toast.makeText(GalleryImagesActivity.this, "Image Saved!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(GalleryImagesActivity.this, "Image uploaded successfully!", Toast.LENGTH_SHORT).show();
                 }
                 break;
             case 4:
@@ -313,7 +315,7 @@ public class GalleryImagesActivity extends AppCompatActivity {
                     }
                     text_gallery.setText(count+" image uploaded");
                     saveImage(thumbnail);
-                    Toast.makeText(GalleryImagesActivity.this, "Image Saved!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(GalleryImagesActivity.this, "Image uploaded successfully!", Toast.LENGTH_SHORT).show();
                 }
                 break;
             case 5:
@@ -346,7 +348,7 @@ public class GalleryImagesActivity extends AppCompatActivity {
                     }
                     text_gallery.setText(count+" image uploaded");
                     saveImage(thumbnail);
-                    Toast.makeText(GalleryImagesActivity.this, "Image Saved!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(GalleryImagesActivity.this, "Image uploaded successfully!", Toast.LENGTH_SHORT).show();
                 }
                 break;
             case 6:
@@ -379,7 +381,7 @@ public class GalleryImagesActivity extends AppCompatActivity {
                     }
                     text_gallery.setText(count+" image uploaded");
                     saveImage(thumbnail);
-                    Toast.makeText(GalleryImagesActivity.this, "Image Saved!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(GalleryImagesActivity.this, "Image uploaded successfully!", Toast.LENGTH_SHORT).show();
                 }
                 break;
             case 7:
@@ -412,7 +414,7 @@ public class GalleryImagesActivity extends AppCompatActivity {
                     }
                     text_gallery.setText(count+" image uploaded");
                     saveImage(thumbnail);
-                    Toast.makeText(GalleryImagesActivity.this, "Image Saved!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(GalleryImagesActivity.this, "Image uploaded successfully!", Toast.LENGTH_SHORT).show();
                 }
                 break;
             case 8:
@@ -445,7 +447,7 @@ public class GalleryImagesActivity extends AppCompatActivity {
                     }
                     text_gallery.setText(count+" image uploaded");
                     saveImage(thumbnail);
-                    Toast.makeText(GalleryImagesActivity.this, "Image Saved!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(GalleryImagesActivity.this, "Image uploaded successfully!", Toast.LENGTH_SHORT).show();
                 }
                 break;
             case 9:
@@ -478,7 +480,7 @@ public class GalleryImagesActivity extends AppCompatActivity {
                     }
                     text_gallery.setText(count+" image uploaded");
                     saveImage(thumbnail);
-                    Toast.makeText(GalleryImagesActivity.this, "Image Saved!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(GalleryImagesActivity.this, "Image uploaded successfully!", Toast.LENGTH_SHORT).show();
                 }
                 break;
             case 10:
@@ -511,7 +513,7 @@ public class GalleryImagesActivity extends AppCompatActivity {
                     }
                     text_gallery.setText(count+" image uploaded");
                     saveImage(thumbnail);
-                    Toast.makeText(GalleryImagesActivity.this, "Image Saved!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(GalleryImagesActivity.this, "Image uploaded successfully!", Toast.LENGTH_SHORT).show();
                 }
                 break;
         }
