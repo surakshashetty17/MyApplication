@@ -31,7 +31,9 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".GalleryImagesActivity"></activity>
+        <activity android:name=".NewProductActivity"></activity>
+        <activity android:name=".CatalogActivity" />
+        <activity android:name=".GalleryImagesActivity" />
         <activity android:name=".ActivateSubscribeActivity" />
         <activity android:name=".VendorPremiumActivity" />
         <activity android:name=".ImageActivity" />

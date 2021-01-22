@@ -10,7 +10,7 @@ import android.widget.LinearLayout;
 
 public class MyAccountActivity extends AppCompatActivity {
 
-    LinearLayout linear_personal,linear_business,linear_banner,linear_currentlocation,linear_bank,linear_franchise,linear_password,linear_pincode,linear_profile,linear_order,linear_gallery;
+    LinearLayout linear_personal,linear_business,linear_banner,linear_currentlocation,linear_bank,linear_franchise,linear_order,linear_gallery,linear_catalog,linear_profile,linear_pincode,linear_password;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -80,33 +80,6 @@ public class MyAccountActivity extends AppCompatActivity {
             }
         });
 
-        linear_password = (LinearLayout) findViewById(R.id.linear_changepassword);
-        linear_password.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(MyAccountActivity.this,ChangePasswordActivity.class);
-                startActivity(i);
-            }
-        });
-
-        linear_pincode = (LinearLayout) findViewById(R.id.linear_pincodeenabled);
-        linear_pincode.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(MyAccountActivity.this,PincodeEnableActivity.class);
-                startActivity(i);
-            }
-        });
-
-        linear_profile = (LinearLayout) findViewById(R.id.linear_profile);
-        linear_profile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(MyAccountActivity.this,ProfilePicActivity.class);
-                startActivity(i);
-            }
-        });
-
         linear_order = (LinearLayout) findViewById(R.id.linear_orders);
         linear_order.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -121,6 +94,42 @@ public class MyAccountActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(MyAccountActivity.this,GalleryImagesActivity.class);
+                startActivity(i);
+            }
+        });
+
+        linear_catalog = (LinearLayout) findViewById(R.id.linear_catalog);
+        linear_catalog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MyAccountActivity.this,CatalogActivity.class);
+                startActivity(i);
+            }
+        });
+
+        linear_profile = (LinearLayout) findViewById(R.id.linear_profile);
+        linear_profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MyAccountActivity.this,ProfilePicActivity.class);
+                startActivity(i);
+            }
+        });
+
+        linear_pincode = (LinearLayout) findViewById(R.id.linear_pincodeenabled);
+        linear_pincode.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MyAccountActivity.this,PincodeEnableActivity.class);
+                startActivity(i);
+            }
+        });
+
+        linear_password = (LinearLayout) findViewById(R.id.linear_changepassword);
+        linear_password.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MyAccountActivity.this,ChangePasswordActivity.class);
                 startActivity(i);
             }
         });
