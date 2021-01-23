@@ -10,7 +10,7 @@ import android.widget.Button;
 
 public class DashBoardActivity extends AppCompatActivity {
 
-    CardView cardView_dash,cardView_myaccount,cardView_vendor;
+    CardView cardView_dash,cardView_myaccount,cardView_vendor,cardView_order;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +35,15 @@ public class DashBoardActivity extends AppCompatActivity {
 
         cardView_vendor = (CardView) findViewById(R.id.vendor);
         cardView_vendor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(DashBoardActivity.this,FranchiseBusinessActivity.class);
+                startActivity(i);
+            }
+        });
+
+        cardView_order = (CardView) findViewById(R.id.franchise_order);
+        cardView_order.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(DashBoardActivity.this,MyAccountLinearActivity.class);

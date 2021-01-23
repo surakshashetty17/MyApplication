@@ -166,6 +166,7 @@
 
                     </androidx.cardview.widget.CardView>
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/franchise_order"
                         android:layout_width="125dp"
                         android:layout_height="125dp"
                         android:layout_marginLeft="10dp"

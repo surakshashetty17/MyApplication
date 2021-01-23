@@ -56,6 +56,7 @@
             android:layout_marginRight="5dp"
             android:layout_marginTop="10dp"
             android:textSize="16sp"
+            android:textColor="@color/light_black"
             android:padding="10dp"
             android:drawableEnd="@drawable/sort_down"/>
 
@@ -67,7 +68,9 @@
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:layout_marginTop="5dp"
+            android:textColorHint="@color/light_black"
             android:textSize="16sp"
+            android:textColor="@color/light_black"
             android:padding="10dp"/>
 
         <LinearLayout
