@@ -27,4 +27,10 @@
         <item name="colorControlActivated">@color/lightblue</item>
         <item name="colorControlHighlight">@color/grey</item>
     </style>
+
+    <style name="EditText" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorControlNormal">@color/grey</item>
+        <item name="colorControlActivated">@color/grey</item>
+        <item name="colorControlHighlight">@color/grey</item>
+    </style>
 </resources>

@@ -31,7 +31,10 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".FranchiseBusinessActivity"></activity>
+        <activity android:name=".NewBusinessActivity"></activity>
+        <activity android:name=".EditPincodeActivity" />
+        <activity android:name=".ManagePincodeActivity" />
+        <activity android:name=".FranchiseBusinessActivity" />
         <activity android:name=".NewProductActivity" />
         <activity android:name=".CatalogActivity" />
         <activity android:name=".GalleryImagesActivity" />

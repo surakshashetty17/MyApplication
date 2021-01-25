@@ -27,24 +27,17 @@
             android:textStyle="bold" />
     </androidx.appcompat.widget.Toolbar>
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="55dp">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
 
     <TextView
+        android:id="@+id/text_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Catalog for Nagraj B"
         android:textColor="@color/black"
         android:textSize="16sp"
         android:layout_marginLeft="5dp"
-        android:layout_marginTop="5dp"/>
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"/>
 
         <TextView
             android:id="@+id/search_spinner"
@@ -55,12 +48,14 @@
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:layout_marginTop="10dp"
-            android:textSize="16sp"
+            android:textSize="14sp"
             android:textColor="@color/light_black"
             android:padding="10dp"
-            android:drawableEnd="@drawable/sort_down"/>
+            android:drawableEnd="@drawable/sort_down"
+            app:layout_constraintTop_toBottomOf="@+id/text_name"/>
 
         <EditText
+            android:id="@+id/text_catalog"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Id/Title/Keyword"
@@ -69,175 +64,179 @@
             android:layout_marginRight="5dp"
             android:layout_marginTop="5dp"
             android:textColorHint="@color/light_black"
-            android:textSize="16sp"
+            android:textSize="14sp"
             android:textColor="@color/light_black"
-            android:padding="10dp"/>
+            android:padding="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/search_spinner"/>
 
         <LinearLayout
+            android:id="@+id/button_catalog"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_gravity="center"
             android:gravity="center"
-            android:layout_marginTop="15dp">
+            android:layout_marginTop="15dp"
+            app:layout_constraintTop_toBottomOf="@+id/text_catalog">
 
             <Button
                 android:layout_width="140dp"
-                android:layout_height="40dp"
+                android:layout_height="35dp"
                 android:background="@drawable/edit_green"
                 android:fontFamily="@font/roboto"
                 android:text="Apply"
                 android:textColor="#fff"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 android:layout_marginRight="5dp"/>
 
             <Button
                 android:layout_width="60dp"
-                android:layout_height="40dp"
+                android:layout_height="35dp"
                 android:background="@drawable/edit_green"
                 android:fontFamily="@font/roboto"
                 android:text="clear"
                 android:textColor="#fff"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold"/>
 
 
             <Button
                 android:layout_width="140dp"
-                android:layout_height="40dp"
+                android:layout_height="35dp"
                 android:background="@drawable/edit_green"
                 android:fontFamily="@font/roboto"
                 android:text="+ New Product"
                 android:textColor="#fff"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 android:layout_marginLeft="5dp"/>
 
         </LinearLayout>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:alpha=".5"
-            android:background="@color/black"
-            android:layout_marginTop="20dp"/>
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:alpha=".5"
+        android:background="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/button_catalog" />
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="240dp">
         <LinearLayout
-            android:id="@+id/linear_orderdetails"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center"
-            android:background="@drawable/edittext"
-            android:padding="5dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp">
-
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="80dp"
-                android:background="@drawable/profile_pic"
-                android:scaleType="fitXY"/>
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="20dp"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginLeft="5dp">
-
-                <TextView
-                    android:layout_width="20dp"
-                    android:layout_height="wrap_content"
-                    android:text="ID-"
-                    android:textSize="14sp"
-                    android:textColor="@color/green"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="1234"
-                    android:textSize="14sp"
-                    android:textColor="@color/green"/>
-                <TextView
-                    android:layout_width="65dp"
-                    android:layout_height="wrap_content"
-                    android:text="Category:"
-                    android:textSize="14sp"
-                    android:gravity="center"
-                    android:textColor="@color/dark_blue"
-                    android:layout_marginLeft="5dp"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Fashion"
-                    android:textSize="14sp"
-                    android:textColor="@color/dark_blue"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="20dp"
-                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:background="@drawable/edittext"
+                android:padding="5dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginLeft="5dp"
-                android:layout_marginTop="5dp">
+                android:layout_marginRight="5dp">
 
-<!--                <TextView-->
-<!--                    android:layout_width="95dp"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:text="Product Name:"-->
-<!--                    android:textSize="14sp"-->
-<!--                    android:textColor="@color/green"/>-->
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Tshirt"
-                    android:textSize="14sp"
-                    android:textColor="@color/dark_blue"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Rs."
-                    android:textSize="14sp"
-                    android:gravity="center"
-                    android:textColor="@color/red"
-                    android:layout_marginLeft="5dp"/>
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/profile_pic"
+                    android:scaleType="fitXY"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="1000.00"
-                    android:textSize="14sp"
-                    android:textColor="@color/red"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="5dp">
+
+                        <TextView
+                            android:layout_width="20dp"
+                            android:layout_height="wrap_content"
+                            android:text="ID-"
+                            android:textSize="14sp"
+                            android:textColor="@color/green"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1234"
+                            android:textSize="14sp"
+                            android:textColor="@color/green"/>
+                        <TextView
+                            android:layout_width="65dp"
+                            android:layout_height="wrap_content"
+                            android:text="Category:"
+                            android:textSize="14sp"
+                            android:gravity="center"
+                            android:textColor="@color/dark_blue"
+                            android:layout_marginLeft="5dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Fashion"
+                            android:textSize="14sp"
+                            android:textColor="@color/dark_blue"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tshirt"
+                            android:textSize="14sp"
+                            android:textColor="@color/dark_blue"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rs."
+                            android:textSize="14sp"
+                            android:gravity="center"
+                            android:textColor="@color/red"
+                            android:layout_marginLeft="5dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1000.00"
+                            android:textSize="14sp"
+                            android:textColor="@color/red"/>
+
+                    </LinearLayout>
+
+                    <Button
+                        android:layout_width="80dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/edit_blue"
+                        android:layout_gravity="right"
+                        android:fontFamily="@font/roboto"
+                        android:text="Edit"
+                        android:textColor="#fff"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginRight="5dp"/>
+
+                </LinearLayout>
             </LinearLayout>
-
-                <Button
-                    android:layout_width="80dp"
-                    android:layout_height="30dp"
-                    android:background="@drawable/edit_blue"
-                    android:layout_gravity="right"
-                    android:fontFamily="@font/roboto"
-                    android:text="Edit"
-                    android:textColor="#fff"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:layout_marginRight="5dp"/>
-
-            </LinearLayout>
-
-
 
         </LinearLayout>
-
-    </LinearLayout>
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
