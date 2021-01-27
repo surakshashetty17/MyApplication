@@ -140,247 +140,6 @@
                 android:backgroundTint="@color/progressbar"/>
         </com.google.android.material.textfield.TextInputLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="20dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="15dp"
-            android:text="Weekly Holidays" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:layout_marginLeft="5dp">
-
-            <CheckBox
-                android:id="@+id/checkBox1"
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:text="Saturday"
-                android:textSize="16sp"
-                android:background="@drawable/edittext"
-                android:textColor="@color/black"
-                android:theme="@style/MyCheckBox"/>
-
-            <CheckBox
-                android:id="@+id/checkBox2"
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:text="Sunday"
-                android:textSize="16sp"
-                android:background="@drawable/edittext"
-                android:textColor="@color/black"
-                android:theme="@style/MyCheckBox"/>
-
-            <CheckBox
-                android:id="@+id/checkBox3"
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:text=" Monday"
-                android:textSize="16sp"
-                android:background="@drawable/edittext"
-                android:textColor="@color/black"
-                android:theme="@style/MyCheckBox"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="5dp"
-            android:orientation="horizontal">
-
-            <CheckBox
-                android:id="@+id/checkBox4"
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:text="Tuesday"
-                android:textSize="16sp"
-                android:layout_marginLeft="5dp"
-                android:background="@drawable/edittext"
-                android:textColor="@color/black"
-                android:theme="@style/MyCheckBox"/>
-
-            <CheckBox
-                android:id="@+id/checkBox5"
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:text="Wednesday"
-                android:textSize="16sp"
-                android:background="@drawable/edittext"
-                android:textColor="@color/black"
-                android:theme="@style/MyCheckBox"/>
-
-            <CheckBox
-                android:id="@+id/checkBox6"
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:text=" Thursday"
-                android:textSize="16sp"
-                android:background="@drawable/edittext"
-                android:textColor="@color/black"
-                android:theme="@style/MyCheckBox"/>
-
-        </LinearLayout>
-
-        <CheckBox
-            android:id="@+id/checkBox7"
-            android:layout_width="120dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="Friday"
-            android:textSize="16sp"
-            android:layout_marginLeft="5dp"
-            android:background="@drawable/edittext"
-            android:textColor="@color/black"
-            android:theme="@style/MyCheckBox"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="20dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="15dp"
-            android:text="Business Type" />
-
-            <androidx.appcompat.widget.AppCompatSpinner
-                android:layout_width="160dp"
-                android:layout_height="40dp"
-                android:fontFamily="@font/roboto"
-                android:spinnerMode="dropdown"
-                android:background="@drawable/edittext"
-                android:layout_marginLeft="5dp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="20dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="15dp"
-            android:text="State" />
-
-        <androidx.appcompat.widget.AppCompatSpinner
-            android:layout_width="160dp"
-            android:layout_height="40dp"
-            android:fontFamily="@font/roboto"
-            android:spinnerMode="dropdown"
-            android:background="@drawable/edittext"
-            android:layout_marginLeft="5dp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="20dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="15dp"
-            android:text="Pan City" />
-
-        <androidx.appcompat.widget.AppCompatSpinner
-            android:layout_width="160dp"
-            android:layout_height="40dp"
-            android:fontFamily="@font/roboto"
-            android:spinnerMode="dropdown"
-            android:background="@drawable/edittext"
-            android:layout_marginLeft="5dp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="20dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="15dp"
-            android:text="Working Hours" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="5dp"
-            android:orientation="horizontal">
-
-            <androidx.appcompat.widget.AppCompatSpinner
-                android:id="@+id/spinner1"
-                android:layout_width="160dp"
-                android:layout_height="40dp"
-                android:fontFamily="@font/roboto"
-                android:spinnerMode="dropdown"
-                android:background="@drawable/edittext" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:text="-"
-                android:layout_gravity="center"
-                android:layout_marginLeft="10dp"
-                android:gravity="center"/>
-
-            <androidx.appcompat.widget.AppCompatSpinner
-                android:id="@+id/spinner2"
-                android:layout_width="160dp"
-                android:layout_height="40dp"
-                android:fontFamily="@font/roboto"
-                android:spinnerMode="dropdown"
-                android:layout_marginLeft="10dp"
-                android:background="@drawable/edittext"/>
-
-        </LinearLayout>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="20dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="15dp"
-            android:text="Shipping / Service pan india" />
-
-        <RadioGroup
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <RadioButton
-                android:layout_width="120dp"
-                android:layout_height="40dp"
-                android:text="Yes"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/edittext"
-                android:textSize="14sp" />
-            <RadioButton
-                android:layout_width="120dp"
-                android:layout_height="40dp"
-                android:text="No"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="10dp"
-                android:background="@drawable/edittext"
-                android:textSize="14sp" />
-        </RadioGroup>
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="20dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="15dp"
-            android:text="Status" />
-
-        <RadioGroup
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <RadioButton
-                android:layout_width="120dp"
-                android:layout_height="40dp"
-                android:text="Active"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/edittext"
-                android:textSize="14sp" />
-            <RadioButton
-                android:layout_width="120dp"
-                android:layout_height="40dp"
-                android:text="InActive"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="10dp"
-                android:background="@drawable/edittext"
-                android:textSize="14sp" />
-        </RadioGroup>
-
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -433,6 +192,270 @@
                 android:backgroundTint="@color/progressbar"/>
         </com.google.android.material.textfield.TextInputLayout>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="15dp"
+            android:text="Weekly Holidays" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginLeft="5dp">
+
+            <CheckBox
+                android:id="@+id/checkBox11"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Saturday"
+                android:textSize="16sp"
+                android:background="@drawable/edittext"
+                android:textColor="@color/black"
+                android:theme="@style/MyCheckBox"/>
+
+            <CheckBox
+                android:id="@+id/checkBox12"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Sunday"
+                android:textSize="16sp"
+                android:background="@drawable/edittext"
+                android:textColor="@color/black"
+                android:theme="@style/MyCheckBox"/>
+
+            <CheckBox
+                android:id="@+id/checkBox13"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text=" Monday"
+                android:textSize="16sp"
+                android:background="@drawable/edittext"
+                android:textColor="@color/black"
+                android:theme="@style/MyCheckBox"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/checkBox14"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Tuesday"
+                android:textSize="16sp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/edittext"
+                android:textColor="@color/black"
+                android:theme="@style/MyCheckBox"/>
+
+            <CheckBox
+                android:id="@+id/checkBox15"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Wednesday"
+                android:textSize="16sp"
+                android:background="@drawable/edittext"
+                android:textColor="@color/black"
+                android:theme="@style/MyCheckBox"/>
+
+            <CheckBox
+                android:id="@+id/checkBox16"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text=" Thursday"
+                android:textSize="16sp"
+                android:background="@drawable/edittext"
+                android:textColor="@color/black"
+                android:theme="@style/MyCheckBox"/>
+
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/checkBox17"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Friday"
+            android:textSize="16sp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/edittext"
+            android:textColor="@color/black"
+            android:theme="@style/MyCheckBox"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="15dp"
+            android:text="Business Type" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinner_business"
+                android:layout_width="160dp"
+                android:layout_height="40dp"
+                android:fontFamily="@font/roboto"
+                android:spinnerMode="dropdown"
+                android:background="@drawable/buttonspinner"
+                android:layout_marginLeft="5dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="15dp"
+            android:text="State" />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spinner_state"
+            android:layout_width="160dp"
+            android:layout_height="40dp"
+            android:fontFamily="@font/roboto"
+            android:spinnerMode="dropdown"
+            android:background="@drawable/buttonspinner"
+            android:layout_marginLeft="5dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="15dp"
+            android:text="Pan City" />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spinner_panindia"
+            android:layout_width="160dp"
+            android:layout_height="40dp"
+            android:fontFamily="@font/roboto"
+            android:spinnerMode="dropdown"
+            android:background="@drawable/buttonspinner"
+            android:layout_marginLeft="5dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="15dp"
+            android:text="Working Hours" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinner11"
+                android:layout_width="160dp"
+                android:layout_height="40dp"
+                android:fontFamily="@font/roboto"
+                android:spinnerMode="dropdown"
+                android:background="@drawable/buttonspinner" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="-"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"/>
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinner12"
+                android:layout_width="160dp"
+                android:layout_height="40dp"
+                android:fontFamily="@font/roboto"
+                android:spinnerMode="dropdown"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/buttonspinner"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="15dp"
+            android:text="Shipping / Service PanIndia" />
+
+        <RadioGroup
+            android:id="@+id/radiogroup_shipping"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/radiobutton_yes"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:text="Yes"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edittext"
+                android:textSize="14sp" />
+            <RadioButton
+                android:id="@+id/radiobutton_no"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:text="No"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/edittext"
+                android:textSize="14sp" />
+        </RadioGroup>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="15dp"
+            android:text="Status" />
+
+        <RadioGroup
+            android:id="@+id/radiogroup_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:text="Active"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edittext"
+                android:textSize="14sp" />
+            <RadioButton
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:text="InActive"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/edittext"
+                android:textSize="14sp" />
+        </RadioGroup>
+
+
+        <Button
+            android:id="@+id/button_savebusiness"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/button_upload"
+            android:fontFamily="@font/roboto"
+            android:gravity="center"
+            android:text="Save"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
     </ScrollView>
