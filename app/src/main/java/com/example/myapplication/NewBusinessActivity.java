@@ -3,6 +3,7 @@ package com.example.myapplication;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -17,6 +18,7 @@ import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.google.android.material.textfield.TextInputEditText;
 
 import java.util.ArrayList;
 
@@ -29,6 +31,9 @@ public class NewBusinessActivity extends AppCompatActivity implements AdapterVie
     ArrayList<String> interestList;
     RadioGroup radiogroup_shipping,radiogroup_status;
     RadioButton radiobutton_shipping,radiobutton_status;
+    TextView text_shipping,text_status;
+
+    TextInputEditText edit_compname, edit_street;
 
     String[] start_time = { "Start Time","4AM", "5AM", "6AM", "7AM", "8AM", "9AM", "10AM", "11AM", "12AM", "1PM", "2PM", "3PM", "4PM", "5PM", "6PM", "7PM", "8PM", "9PM", "10PM", "11PM", "12AM"};
     String[] stop_time = { "Stop Time","4AM", "5AM", "6AM", "7AM", "8AM", "9AM", "10AM", "11AM", "12AM", "1PM", "2PM", "3PM", "4PM", "5PM", "6PM", "7PM", "8PM", "9PM", "10PM", "11PM", "12AM"};
@@ -51,6 +56,13 @@ public class NewBusinessActivity extends AppCompatActivity implements AdapterVie
                 onBackPressed();
             }
         });
+        text_shipping = (TextView) findViewById(R.id.text_shipping);
+        text_status = (TextView) findViewById(R.id.text_status);
+
+
+        edit_compname = (TextInputEditText) findViewById(R.id.textedit_compname);
+        edit_street = (TextInputEditText) findViewById(R.id.textedit_street);
+
         checkBox1=(CheckBox)findViewById(R.id.checkBox11);
         checkBox2=(CheckBox)findViewById(R.id.checkBox12);
         checkBox3=(CheckBox)findViewById(R.id.checkBox13);
@@ -99,6 +111,7 @@ public class NewBusinessActivity extends AppCompatActivity implements AdapterVie
 
         save_changes = (Button)findViewById(R.id.button_savebusiness);
         save_changes.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("ResourceType")
             @Override
             public void onClick(View v) {
                 interestList = new ArrayList<>();
@@ -165,8 +178,67 @@ public class NewBusinessActivity extends AppCompatActivity implements AdapterVie
 //                radiobutton_status = (RadioButton) findViewById(selectedId1);
 //                Log.d("tag","Status: " + radiobutton_status.getText());
 
-                Intent i = new Intent(NewBusinessActivity.this,NewBusinessContactActivity.class);
-                startActivity(i);
+                if(radiogroup_shipping.getCheckedRadioButtonId()==-1)
+                {
+                    Toast.makeText(getApplicationContext(), "Please select Shipping / Service PanIndia", Toast.LENGTH_SHORT).show();
+                }
+                else
+                {
+                    text_shipping.setError(null);
+                    // get selected radio button from radioGroup
+                    int selectedId = radiogroup_shipping.getCheckedRadioButtonId();
+                    // find the radiobutton by returned id
+                    radiobutton_shipping = (RadioButton)findViewById(selectedId);
+                    Log.d("tag","Shipping/Service PanIndia: " + radiobutton_shipping.getText());
+                }
+
+                if(radiogroup_status.getCheckedRadioButtonId()==-1)
+                {
+                    Toast.makeText(getApplicationContext(), "Please select Status", Toast.LENGTH_SHORT).show();
+                }
+                else
+                {
+                    text_status.setError(null);
+                    int selectedId = radiogroup_status.getCheckedRadioButtonId();
+                    radiobutton_status = (RadioButton)findViewById(selectedId);
+                    Log.d("tag","Status: " + radiobutton_status.getText());
+                }
+
+                //field validation code for 1.company name 2.street(address) 3.radio button
+                final String Name=edit_compname.getText().toString();
+                final String word=edit_street.getText().toString();
+
+                if(Name.length()==0)
+                {
+                    edit_compname.requestFocus();
+                    edit_compname.setError("FIELD CANNOT BE EMPTY");
+                }
+                else if(!Name.matches("[a-zA-Z ]+"))
+                {
+                    edit_compname.requestFocus();
+                    edit_compname.setError("ENTER ONLY ALPHABETICAL CHARACTER");
+                }
+                else if(word.length()==0)
+                {
+                    edit_street.requestFocus();
+                    edit_street.setError("FIELD CANNOT BE EMPTY");
+                }
+                else if(radiogroup_shipping.getCheckedRadioButtonId()==-1)
+                {
+                    Toast.makeText(getApplicationContext(), "Please select Shipping / Service PanIndia", Toast.LENGTH_SHORT).show();
+                    text_shipping.setError("Choose Shipping/Service PanIndia");
+                }
+                else if(radiogroup_status.getCheckedRadioButtonId()==-1)
+                {
+                    text_status.setError("Choose Status");
+                    Toast.makeText(getApplicationContext(), "Please select Status", Toast.LENGTH_SHORT).show();
+                }
+                else
+                {
+                    Intent i = new Intent(NewBusinessActivity.this,NewBusinessContactActivity.class);
+                    startActivity(i);
+                }
+
             }
         });
     }
