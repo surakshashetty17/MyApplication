@@ -13,6 +13,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
 
+import com.facebook.shimmer.ShimmerFrameLayout;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -33,12 +35,19 @@ public class PagenationActivity extends AppCompatActivity {
     ArrayList<MainData> dataArrayList = new ArrayList<>();
     MainAdapter adapter;
     int page = 1,limit = 10;
+
+    private ShimmerFrameLayout mShimmerViewContainer;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pagenation);
         Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
+
+        mShimmerViewContainer = findViewById(R.id.shimmer_view_container);
 
         nestedScrollView = findViewById(R.id.scrollview);
         recyclerView = findViewById(R.id.recyclerview);
@@ -83,6 +92,9 @@ public class PagenationActivity extends AppCompatActivity {
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
+
+                    mShimmerViewContainer.stopShimmerAnimation();
+                    mShimmerViewContainer.setVisibility(View.GONE);
                 }
             }
 
@@ -91,6 +103,18 @@ public class PagenationActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        mShimmerViewContainer.startShimmerAnimation();
+    }
+
+    @Override
+    protected void onPause() {
+        mShimmerViewContainer.stopShimmerAnimation();
+        super.onPause();
     }
 
     private void parseResult(JSONArray jsonArray)
