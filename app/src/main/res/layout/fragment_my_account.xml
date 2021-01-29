@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MyAccountFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+
+                <LinearLayout
+                    android:id="@+id/linear_personaldetailsf1"
+                    android:layout_width="115dp"
+                    android:layout_height="115dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:background="@drawable/edittext"
+                    android:padding="10dp"
+                    android:layout_marginRight="5dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/personal_details"
+                        android:layout_gravity="center"/>
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="35dp"
+                        android:text="Personal details"
+                        android:textStyle="normal"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/linear_businessdetailsf1"
+                    android:layout_width="115dp"
+                    android:layout_height="115dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:background="@drawable/edittext"
+                    android:padding="10dp"
+                    android:layout_marginRight="5dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/businessdetails11"
+                        android:layout_gravity="center"/>
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="35dp"
+                        android:text="Business details"
+                        android:textStyle="normal"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_bannerf1"
+                    android:layout_width="115dp"
+                    android:layout_height="115dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:background="@drawable/edittext"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/image_icon"
+                        android:layout_gravity="center"/>
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:text="Profile Pic and banner"
+                        android:textStyle="normal" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="10dp">
+                <LinearLayout
+                    android:id="@+id/linear_updatelocationf1"
+                    android:layout_width="115dp"
+                    android:layout_height="115dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:background="@drawable/edittext"
+                    android:padding="10dp"
+                    android:layout_marginRight="5dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/location"
+                        android:layout_gravity="center"/>
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="35dp"
+                        android:text="Update location"
+                        android:textStyle="normal"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/linear_bankdetailsf1"
+                    android:layout_width="115dp"
+                    android:layout_height="115dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:background="@drawable/edittext"
+                    android:padding="10dp"
+                    android:layout_marginRight="5dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/bank_details"
+                        android:layout_gravity="center"/>
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="35dp"
+                        android:text="KYC and bank details"
+                        android:textStyle="normal"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_franchisepremiumf1"
+                    android:layout_width="115dp"
+                    android:layout_height="115dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:background="@drawable/edittext"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/premium_icon"
+                        android:layout_gravity="center"/>
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="35dp"
+                        android:text="Upgrade to Premium"
+                        android:textStyle="normal"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="10dp">
+                <LinearLayout
+                    android:id="@+id/linear_ordersf1"
+                    android:layout_width="115dp"
+                    android:layout_height="115dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:background="@drawable/edittext"
+                    android:padding="10dp"
+                    android:layout_marginRight="5dp">
+
+                    <ImageView
+                        android:layout_width="57dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/order" />
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="35dp"
+                        android:text="Orders"
+                        android:textStyle="normal"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/linear_galleryf1"
+                    android:layout_width="115dp"
+                    android:layout_height="115dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:background="@drawable/edittext"
+                    android:padding="10dp"
+                    android:layout_marginRight="5dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/profile_pic"
+                        android:layout_gravity="center"/>
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="35dp"
+                        android:text="Gallery Images"
+                        android:textStyle="normal"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_catalogf1"
+                    android:layout_width="115dp"
+                    android:layout_height="115dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:background="@drawable/edittext"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/businessdetails11"
+                        android:layout_gravity="center"/>
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="35dp"
+                        android:text="Catalog"
+                        android:textStyle="normal"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"/>
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:id="@+id/linear_profilef1"
+                    android:layout_width="115dp"
+                    android:layout_height="115dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:background="@drawable/edittext"
+                    android:padding="10dp"
+                    android:layout_marginRight="5dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/profile_pic"
+                        android:layout_gravity="center"/>
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="35dp"
+                        android:text="Update Profile Pic"
+                        android:textStyle="normal"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_pincodeenabledf1"
+                    android:layout_width="115dp"
+                    android:layout_height="115dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:background="@drawable/edittext"
+                    android:padding="10dp"
+                    android:layout_marginRight="5dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/location"
+                        android:layout_gravity="center"/>
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="35dp"
+                        android:text="Pincodes Enabled"
+                        android:textStyle="normal"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_changepasswordf1"
+                    android:layout_width="115dp"
+                    android:layout_height="115dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:background="@drawable/edittext"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/change_password"
+                        android:layout_gravity="center"/>
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="35dp"
+                        android:text="Change Password"
+                        android:textStyle="normal"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</FrameLayout>

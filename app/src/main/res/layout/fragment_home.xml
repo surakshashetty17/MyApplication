@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="50dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#eee">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:orientation="horizontal"
+                android:background="#234777"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/group"
+                    android:layout_marginLeft="5dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="#234777">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Take Your Business"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:layout_marginTop="20dp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Online With NanoCart."
+                        android:textColor="#FAE30C"
+                        android:gravity="center"
+                        android:textSize="14sp"/>
+
+                    <Button
+                        android:layout_width="160dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:background= "@drawable/button_nano"
+                        android:fontFamily="@font/roboto"
+                        android:text="Join Nanocart Now"
+                        android:textColor="#fff"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--            <LinearLayout-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:orientation="horizontal"-->
+            <!--                android:layout_gravity="center"-->
+            <!--                android:gravity="center"-->
+            <!--                android:layout_marginTop="@dimen/padding_10">-->
+
+            <!--                    <LinearLayout-->
+            <!--                        android:layout_width="100dp"-->
+            <!--                        android:layout_height="100dp"-->
+            <!--                        android:orientation="vertical"-->
+            <!--                        android:gravity="center"-->
+            <!--                        android:layout_gravity="center"-->
+            <!--                        android:background="@drawable/edittext"-->
+            <!--                        android:layout_marginRight="10dp">-->
+
+            <!--                        <ImageView-->
+            <!--                            android:layout_width="55dp"-->
+            <!--                            android:layout_height="55dp"-->
+            <!--                            android:background="@drawable/bank_details"-->
+            <!--                            android:layout_gravity="center"/>-->
+            <!--                        <TextView-->
+            <!--                            android:layout_width="wrap_content"-->
+            <!--                            android:layout_height="wrap_content"-->
+            <!--                            android:text="Home"-->
+            <!--                            android:textStyle="normal"-->
+            <!--                            android:textColor="@color/dark_blue"/>-->
+            <!--                    </LinearLayout>-->
+
+            <!--                    <LinearLayout-->
+            <!--                        android:layout_width="100dp"-->
+            <!--                        android:layout_height="100dp"-->
+            <!--                        android:orientation="vertical"-->
+            <!--                        android:gravity="center"-->
+            <!--                        android:layout_gravity="center"-->
+            <!--                        android:background="@drawable/edittext"-->
+            <!--                        android:layout_marginLeft="10dp">-->
+
+            <!--                        <ImageView-->
+            <!--                            android:layout_width="57dp"-->
+            <!--                            android:layout_height="55dp"-->
+            <!--                            android:layout_gravity="center"-->
+            <!--                            android:background="@drawable/profile_pic" />-->
+            <!--                        <TextView-->
+            <!--                            android:layout_width="wrap_content"-->
+            <!--                            android:layout_height="wrap_content"-->
+            <!--                            android:text="Contact"-->
+            <!--                            android:textStyle="normal"-->
+            <!--                            android:textColor="@color/dark_blue"/>-->
+            <!--                    </LinearLayout>-->
+
+            <!--            </LinearLayout>-->
+
+            <!--            <LinearLayout-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:orientation="horizontal"-->
+            <!--                android:layout_gravity="center"-->
+            <!--                android:gravity="center"-->
+            <!--                android:layout_marginTop="10dp">-->
+
+            <!--                <LinearLayout-->
+            <!--                    android:id="@+id/linear_myaccount"-->
+            <!--                    android:layout_width="100dp"-->
+            <!--                    android:layout_height="100dp"-->
+            <!--                    android:orientation="vertical"-->
+            <!--                    android:gravity="center"-->
+            <!--                    android:layout_gravity="center"-->
+            <!--                    android:background="@drawable/edittext"-->
+            <!--                    android:layout_marginRight="@dimen/padding_10">-->
+
+            <!--                    <ImageView-->
+            <!--                        android:layout_width="55dp"-->
+            <!--                        android:layout_height="55dp"-->
+            <!--                        android:background="@drawable/personal_details"-->
+            <!--                        android:layout_gravity="center"/>-->
+            <!--                    <TextView-->
+            <!--                        android:layout_width="wrap_content"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:text="My Account"-->
+            <!--                        android:textStyle="normal"-->
+            <!--                        android:textColor="@color/dark_blue"/>-->
+            <!--                </LinearLayout>-->
+
+            <!--                <LinearLayout-->
+            <!--                    android:layout_width="100dp"-->
+            <!--                    android:layout_height="100dp"-->
+            <!--                    android:orientation="vertical"-->
+            <!--                    android:gravity="center"-->
+            <!--                    android:layout_gravity="center"-->
+            <!--                    android:background="@drawable/edittext"-->
+            <!--                    android:layout_marginLeft="@dimen/padding_10">-->
+
+            <!--                    <ImageView-->
+            <!--                        android:layout_width="55dp"-->
+            <!--                        android:layout_height="55dp"-->
+            <!--                        android:background="@drawable/logout"-->
+            <!--                        android:layout_gravity="center"/>-->
+            <!--                    <TextView-->
+            <!--                        android:layout_width="wrap_content"-->
+            <!--                        android:layout_height="wrap_content"-->
+            <!--                        android:text="Logout"-->
+            <!--                        android:textStyle="normal"-->
+            <!--                        android:textColor="@color/dark_blue"/>-->
+            <!--                </LinearLayout>-->
+            <!--            </LinearLayout>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="#eee">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="WHY TO JOIN NANOCART?"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="5dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="@color/white"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp">
+
+                        <LinearLayout
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="40dp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="55dp"
+                                android:layout_height="55dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/hyperlocal" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Hyperlocal"
+                                android:gravity="center"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="40dp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="55dp"
+                                android:layout_height="55dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/globe" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Sell National wide"
+                                android:gravity="center"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/roundclock" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="24*7 Support"
+                            android:gravity="center"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="5dp">
+
+                        <LinearLayout
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="40dp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="55dp"
+                                android:layout_height="55dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/transfer" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Sameday Payouts"
+                                android:gravity="center"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="40dp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="55dp"
+                                android:layout_height="55dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/grow" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Grow Online"
+                                android:gravity="center"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="#eee">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="SELLING ONLINE IS SO EASY"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="@color/white"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp">
+
+                    <ImageView
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/book"
+                        android:layout_marginTop="10dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Join Nanocart"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:layout_marginTop="5dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="You can join Nanocart Business with basic details."
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="5dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="@color/white"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp">
+
+                    <ImageView
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/selection"
+                        android:layout_marginTop="10dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Get Verified"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:layout_marginTop="5dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Submit KYC, bank details and get verified"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="5dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/complete" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="Start Selling"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="Take your business online with Nanocart"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>
