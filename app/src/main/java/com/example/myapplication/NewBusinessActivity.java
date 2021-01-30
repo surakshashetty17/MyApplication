@@ -170,14 +170,7 @@ public class NewBusinessActivity extends AppCompatActivity implements AdapterVie
                 String pan_indiatext = spin5.getSelectedItem().toString();
                 System.out.println("Select City:  "+pan_indiatext);
 
-//                int selectedId = radiogroup_shipping.getCheckedRadioButtonId();
-//                radiobutton_shipping = (RadioButton) findViewById(selectedId);
-//                Log.d("tag","Shipping/Service PanIndia: " + radiobutton_shipping.getText());
-//
-//                int selectedId1 = radiogroup_status.getCheckedRadioButtonId();
-//                radiobutton_status = (RadioButton) findViewById(selectedId1);
-//                Log.d("tag","Status: " + radiobutton_status.getText());
-
+                //for printing radiobutton selected values in android studio
                 if(radiogroup_shipping.getCheckedRadioButtonId()==-1)
                 {
                     Toast.makeText(getApplicationContext(), "Please select Shipping / Service PanIndia", Toast.LENGTH_SHORT).show();

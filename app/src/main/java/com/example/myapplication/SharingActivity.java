@@ -57,22 +57,28 @@ public class SharingActivity extends AppCompatActivity {
                 textrating.setText("Rating: "+rating+"\n"+"Review: "+review);
             }
         });
+
+        //code for share-image in Linear Layout
         imageshare.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 Intent intent = new Intent(Intent.ACTION_SEND);
                 intent.setType("text/plain");
+                String to = "jsunilkumarr96@gmail.com";
                 String sharebody = ("Rating and Review: "+String.valueOf(ratingbar.getRating())+" and "+(editreview.getText().toString()));
                 String sharesubject = "Your Subject here";
 
                 intent.putExtra(Intent.EXTRA_TEXT,sharebody);
                 intent.putExtra(Intent.EXTRA_SUBJECT,sharesubject);
+//                intent.putExtra(Intent.EXTRA_SUBJECT,sharesubject);
+                intent.putExtra(Intent.EXTRA_EMAIL, new String[]{ to}); //email should be in string form
 
                 startActivity(Intent.createChooser(intent,"shareusing"));
             }
         });
 
+        //dialog box code
         buttonalterdialog = (Button) findViewById(R.id.alterdialogbutton);
         builder = new AlertDialog.Builder(this);
         buttonalterdialog.setOnClickListener(new View.OnClickListener() {
@@ -118,6 +124,7 @@ public class SharingActivity extends AppCompatActivity {
         return super.onCreateOptionsMenu(menu);
     }
 
+    //code for share-image in toolbar
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
