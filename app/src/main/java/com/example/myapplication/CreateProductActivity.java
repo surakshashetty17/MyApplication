@@ -8,13 +8,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class NewProductActivity extends AppCompatActivity {
+public class CreateProductActivity extends AppCompatActivity {
 
-    Button button_next;
+    Button button_newproduct,button_add;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_new_product);
+        setContentView(R.layout.activity_create_product);
 
         Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
@@ -26,11 +26,20 @@ public class NewProductActivity extends AppCompatActivity {
             }
         });
 
-        button_next = (Button) findViewById(R.id.button_newproduct_image);
-        button_next.setOnClickListener(new View.OnClickListener() {
+        button_newproduct = (Button) findViewById(R.id.button_newproduct);
+        button_newproduct.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(NewProductActivity.this,NewProductImageActivity.class);
+                Intent i = new Intent(CreateProductActivity.this,NewProductActivity.class);
+                startActivity(i);
+            }
+        });
+
+        button_add = (Button) findViewById(R.id.button_add);
+        button_add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(CreateProductActivity.this,NewProductActivity.class);
                 startActivity(i);
             }
         });

@@ -31,7 +31,9 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".BusinessHomeActivity"></activity>
+        <activity android:name=".NewProductImageActivity"></activity>
+        <activity android:name=".CreateProductActivity" />
+        <activity android:name=".BusinessHomeActivity" />
         <activity android:name=".NewBusinessBankActivity" />
         <activity android:name=".NewBusinessContactActivity" />
         <activity android:name=".NewBusinessActivity" />

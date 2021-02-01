@@ -8,13 +8,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class NewProductActivity extends AppCompatActivity {
+public class NewProductImageActivity extends AppCompatActivity {
 
-    Button button_next;
+    Button button_goback;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_new_product);
+        setContentView(R.layout.activity_new_product_image);
 
         Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
@@ -25,13 +25,13 @@ public class NewProductActivity extends AppCompatActivity {
                 onBackPressed();
             }
         });
-
-        button_next = (Button) findViewById(R.id.button_newproduct_image);
-        button_next.setOnClickListener(new View.OnClickListener() {
+        button_goback = (Button) findViewById(R.id.button_goback);
+        button_goback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(NewProductActivity.this,NewProductImageActivity.class);
-                startActivity(i);
+//                Intent i = new Intent(NewProductImageActivity.this,NewProductActivity.class);
+//                startActivity(i);
+                onBackPressed();
             }
         });
     }
