@@ -28,7 +28,7 @@ public class DashBoardActivity extends AppCompatActivity {
         cardView_myaccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(DashBoardActivity.this,MyAccountActivity.class);
+                Intent i = new Intent(DashBoardActivity.this,MyAccountLinearActivity.class);
                 startActivity(i);
             }
         });
@@ -46,7 +46,7 @@ public class DashBoardActivity extends AppCompatActivity {
         cardView_order.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(DashBoardActivity.this,MyAccountLinearActivity.class);
+                Intent i = new Intent(DashBoardActivity.this,OrdersActivity.class);
                 startActivity(i);
             }
         });

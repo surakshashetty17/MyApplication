@@ -131,8 +131,8 @@ public class NewBusinessActivity extends AppCompatActivity implements AdapterVie
 
                 if (checkBox4.isChecked()) {
                     interestList.add("Tuesday");
-
                 }
+
                 if (checkBox5.isChecked()) {
                     interestList.add("Wednesday");
                 }
@@ -231,7 +231,6 @@ public class NewBusinessActivity extends AppCompatActivity implements AdapterVie
                     Intent i = new Intent(NewBusinessActivity.this,NewBusinessContactActivity.class);
                     startActivity(i);
                 }
-
             }
         });
     }
