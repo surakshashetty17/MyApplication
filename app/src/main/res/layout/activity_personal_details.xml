@@ -27,64 +27,96 @@
             android:textStyle="bold" />
     </androidx.appcompat.widget.Toolbar>
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:layout_marginTop="60dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="20dp"
-        android:layout_marginLeft="5dp"
-        android:text="Your Name"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginLeft="10dp"
+            android:text="Your Name"/>
 
-    <EditText
-        android:layout_width="350dp"
-        android:layout_height="40dp"
-        android:ems="10"
-        android:fontFamily="@font/roboto"
-        android:inputType="textPersonName"
-        android:paddingLeft="6dp"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        android:layout_marginLeft="5dp"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="20dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="20dp"
-        android:text="Email" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:fontFamily="@font/roboto"
+            android:inputType="textPersonName"
+            android:paddingLeft="6dp"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
 
-    <EditText
-        android:layout_width="350dp"
-        android:layout_height="40dp"
-        android:ems="10"
-        android:fontFamily="@font/roboto"
-        android:inputType="textPersonName"
-        android:paddingLeft="6dp"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        android:layout_marginLeft="5dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginLeft="@dimen/padding_10"
+            android:layout_marginTop="15dp"
+            android:text="Email" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="20dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="20dp"
-        android:text="Mobile Number" />
 
-    <EditText
-        android:layout_width="350dp"
-        android:layout_height="40dp"
-        android:ems="10"
-        android:fontFamily="@font/roboto"
-        android:inputType="number"
-        android:paddingLeft="6dp"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        android:layout_marginLeft="5dp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:ems="10"
+            android:fontFamily="@font/roboto"
+            android:inputType="textPersonName"
+            android:paddingLeft="6dp"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:text="Mobile Number" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:ems="10"
+            android:fontFamily="@font/roboto"
+            android:inputType="number"
+            android:paddingLeft="6dp"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+
+
+        <com.chinodev.androidneomorphframelayout.NeomorphFrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:neomorph_view_type="rectangular"
+            app:neomorph_shadow_type="outer"
+            android:layerType="software"
+            android:layout_marginTop="20dp"
+            app:neomorph_background_color="@color/lightblue1"
+            app:neomorph_shadow_color="@color/lightblue">
+
+<!--            this below code can be upplied in the above code-->
+<!--            app:neomorph_highlight_color="@color/grey"-->
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/neomorph_edittext"
+                android:fontFamily="@font/roboto"
+                android:text="Submit"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </com.chinodev.androidneomorphframelayout.NeomorphFrameLayout>
+
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

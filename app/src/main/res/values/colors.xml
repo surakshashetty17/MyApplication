@@ -15,6 +15,7 @@
     <color name="red">#F80000</color>
     <color name="orange">#FF8018</color>
     <color name="lightblue">#76C9EE</color>
+    <color name="lightblue1">#63ADCE</color>
     <color name="progressbar">#DAE2DB</color>
     <color name="active_dots">#1A84FE</color>
     <color name="inactive_dots">#696969</color>
@@ -27,6 +28,11 @@
     <color name="upload_blue">#07A2B8</color>
     <color name="light_white">#F8F6F6</color>
     <color name="background">#dddddd</color>
+
+    //for neomorphism 3d effect
+    <color name="light">#e1e6ec</color>
+    <color name="semi_white">#f8f7f7</color>
+    <color name="neomorph_shadow_color">#c2c7c7</color>
 
 
 

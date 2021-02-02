@@ -22,12 +22,14 @@
         <com.google.android.material.tabs.TabItem
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Home" />
+            android:text="Home"
+            android:icon="@drawable/home"/>
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="My Account" />
+            android:text="My Account"
+            android:icon="@drawable/profile_pic"/>
     </com.google.android.material.tabs.TabLayout>
     <FrameLayout
         android:id="@+id/frame1"

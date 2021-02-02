@@ -12,8 +12,8 @@ public class PersonalDetailsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_personal_details);
-        Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbar);
 
+        Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
         mToolbar.setNavigationIcon(R.drawable.ic_keyboard_arrow_left_black_24dp);
         mToolbar.setNavigationOnClickListener(new View.OnClickListener() {

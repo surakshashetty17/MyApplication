@@ -50,8 +50,10 @@ dependencies {
     implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0-alpha'
     implementation 'com.google.android.gms:play-services-places:16.0.0'
     implementation 'com.facebook.shimmer:shimmer:0.1.0@aar'
-
     implementation 'com.kofigyan.stateprogressbar:stateprogressbar:1.0.0'
+
+    implementation 'com.github.4inodev:Neomorphic-FrameLayout-Android:1.03'
+
 
 
 }
