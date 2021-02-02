@@ -12,6 +12,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
+import android.graphics.drawable.AnimationDrawable;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -20,6 +21,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 import android.widget.VideoView;
 
@@ -35,6 +37,9 @@ public class DowloadActivity extends AppCompatActivity implements DatePickerDial
     private int _day;
     private int _month;
     private int _birthYear;
+
+    private AnimationDrawable animationDrawable;
+    private ImageView mProgressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -107,6 +112,19 @@ public class DowloadActivity extends AppCompatActivity implements DatePickerDial
 
             }
         });
+
+
+
+        //code for animation progress baar
+        mProgressBar = (ImageView) findViewById(R.id.ivProgress);
+        mProgressBar.setBackgroundResource(R.drawable.loading_web_animation);
+        animationDrawable =(AnimationDrawable)mProgressBar.getBackground();
+        mProgressBar.setVisibility(View.VISIBLE);
+        animationDrawable.start();
+//        mProgressBar.setVisibility(View.GONE);
+//        animationDrawable.stop();
+
+
     }
 
     //to dowload the pdf give in the code
