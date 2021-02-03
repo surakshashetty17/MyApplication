@@ -25,7 +25,7 @@ public class MyAccountFragment extends Fragment {
         // Required empty public constructor
     }
 
-    LinearLayout linear_personal,linear_business,linear_banner,linear_currentlocation,linear_bank,linear_franchise,linear_order,linear_gallery,linear_catalog,linear_profile,linear_pincode,linear_password;
+    LinearLayout linear_personal,linear_business,linear_banner,linear_currentlocation,linear_bank,linear_franchise,linear_order,linear_gallery,linear_catalog,linear_profile,linear_pincode,linear_password,linear_helpdesk;
 
 
     @Override
@@ -140,6 +140,15 @@ public class MyAccountFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getContext(),ChangePasswordActivity.class);
+                startActivity(i);
+            }
+        });
+
+        linear_helpdesk = (LinearLayout) rootView.findViewById(R.id.linear_helpdeskf1);
+        linear_helpdesk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getContext(),HelpDeskActivity.class);
                 startActivity(i);
             }
         });
