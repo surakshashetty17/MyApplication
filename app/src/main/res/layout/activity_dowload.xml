@@ -82,11 +82,32 @@
 
         <ImageView
             android:id="@+id/ivProgress"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_gravity="center"
             android:visibility="visible"
             android:layout_marginTop="20dp"/>
+
+        <Switch
+            android:id="@+id/simple_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:checked="false"
+            android:text="switch 1"
+            android:textOff="Off"
+            android:textOn="On"
+            android:layout_marginTop="10dp"
+            android:theme="@style/SCBSwitch"/>
+
+        <Button
+            android:id="@+id/button_switch"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:text="Submit"
+            android:background="@drawable/edit_blue"/>
 
 
     </LinearLayout>

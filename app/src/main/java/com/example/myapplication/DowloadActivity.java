@@ -17,11 +17,13 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Switch;
 import android.widget.Toast;
 import android.widget.VideoView;
 
@@ -32,11 +34,14 @@ public class DowloadActivity extends AppCompatActivity implements DatePickerDial
 
 
     EditText editurl,_editText;
-    Button buttonurl,buttonpdf;
+    Button buttonurl,buttonpdf,button_switch;
     private static final int PERMISIO_STORAGE_CODE = 1000;
     private int _day;
     private int _month;
     private int _birthYear;
+
+    Switch simple_switch;
+
 
     private AnimationDrawable animationDrawable;
     private ImageView mProgressBar;
@@ -123,6 +128,25 @@ public class DowloadActivity extends AppCompatActivity implements DatePickerDial
         animationDrawable.start();
 //        mProgressBar.setVisibility(View.GONE);
 //        animationDrawable.stop();
+
+
+        simple_switch = (Switch) findViewById(R.id.simple_switch);
+        button_switch = (Button) findViewById(R.id.button_switch);
+        button_switch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String statusSwitch1;
+                if (simple_switch.isChecked()) {
+                    statusSwitch1 = simple_switch.getTextOn().toString();
+                }
+                else {
+                    statusSwitch1 = simple_switch.getTextOff().toString();
+                }
+                Log.d("Switch","Swiitch is: "+statusSwitch1);
+
+                Toast.makeText(getApplicationContext(), "Switch1 :" + statusSwitch1, Toast.LENGTH_LONG).show(); // display the current state for switch's
+            }
+        });
 
 
     }
