@@ -32,6 +32,7 @@ public class BankDetailsActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(BankDetailsActivity.this,UploadActivity.class);
                 startActivity(i);
+                overridePendingTransition(R.anim.slide_in_right_y, R.anim.slide_out_left_y);
             }
         });
     }

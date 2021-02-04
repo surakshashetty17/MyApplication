@@ -31,6 +31,8 @@ public class UploadActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(UploadActivity.this,GST_CertificateActivity.class);
                 startActivity(i);
+                overridePendingTransition(R.anim.slide_in_right_x, R.anim.slide_out_left_x);
+
             }
         });
         linear_idproof = (LinearLayout) findViewById(R.id.linear_idproof);
@@ -41,5 +43,10 @@ public class UploadActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+    }
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(R.anim.slide_in_left_y, R.anim.slide_out_right_y);
     }
 }

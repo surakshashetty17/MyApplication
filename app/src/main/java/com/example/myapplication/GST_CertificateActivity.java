@@ -36,4 +36,10 @@ public class GST_CertificateActivity extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(R.anim.slide_in_left_x, R.anim.slide_out_right_x);
+    }
 }
