@@ -12,6 +12,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
+import android.graphics.Color;
 import android.graphics.drawable.AnimationDrawable;
 import android.net.Uri;
 import android.os.Build;
@@ -27,6 +28,8 @@ import android.widget.Switch;
 import android.widget.Toast;
 import android.widget.VideoView;
 
+import com.cepheuen.elegantnumberbutton.view.ElegantNumberButton;
+
 import java.util.Calendar;
 import java.util.TimeZone;
 
@@ -41,6 +44,7 @@ public class DowloadActivity extends AppCompatActivity implements DatePickerDial
     private int _birthYear;
 
     Switch simple_switch;
+    ElegantNumberButton button_ele;
 
 
     private AnimationDrawable animationDrawable;
@@ -135,6 +139,7 @@ public class DowloadActivity extends AppCompatActivity implements DatePickerDial
         button_switch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 String statusSwitch1;
                 if (simple_switch.isChecked()) {
                     statusSwitch1 = simple_switch.getTextOn().toString();
@@ -142,12 +147,23 @@ public class DowloadActivity extends AppCompatActivity implements DatePickerDial
                 else {
                     statusSwitch1 = simple_switch.getTextOff().toString();
                 }
-                Log.d("Switch","Swiitch is: "+statusSwitch1);
 
+                String num;
+                num = button_ele.getNumber();
+                Log.d("Switch","Swiitch is: "+statusSwitch1);
+                Log.d("Elegent number button","Selected is: "+num);
                 Toast.makeText(getApplicationContext(), "Switch1 :" + statusSwitch1, Toast.LENGTH_LONG).show(); // display the current state for switch's
             }
         });
 
+        button_ele = (ElegantNumberButton) findViewById(R.id.button_elegantnumber);
+//        button_ele.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                String num = button_ele.getNumber();
+//                Log.d("Elegent number button","Selected: "+num);
+//            }
+//        });
 
     }
 
