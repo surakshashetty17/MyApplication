@@ -38,6 +38,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:layout_constraintVertical_bias="0.0" />
 
+
     <EditText
         android:id="@+id/reg_shopname"
         android:layout_width="300dp"
@@ -57,11 +58,10 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.500"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8"
-        app:layout_constraintVertical_bias="0.019" />
-
+        app:layout_constraintVertical_bias="0.032" />
 
     <EditText
         android:id="@+id/reg_username"
@@ -100,7 +100,7 @@
         android:ems="10"
         android:fontFamily="@font/roboto"
         android:hint="Email Address"
-        android:inputType="textPersonName"
+        android:inputType="textEmailAddress"
         android:paddingLeft="6dp"
         android:textColor="#000"
         android:textSize="16sp"
@@ -146,7 +146,7 @@
         android:ems="10"
         android:fontFamily="@font/roboto"
         android:hint="Business pincode"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:paddingLeft="6dp"
         android:textColor="#000"
         android:textSize="16sp"
