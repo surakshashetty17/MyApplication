@@ -182,18 +182,36 @@
         app:layout_constraintVertical_bias="1.0"
         tools:layout_editor_absoluteX="0dp">
 
-    <Button
-        android:id="@+id/gst_certificateupload"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:background="@drawable/button_upload"
-        android:fontFamily="@font/roboto"
-        android:gravity="center"
-        android:text="Upload"
-        android:textColor="#fff"
-        android:textSize="16sp"
-        android:textStyle="bold" />
+<!--    <Button-->
+<!--        android:id="@+id/gst_certificateupload"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="40dp"-->
+<!--        android:layout_marginLeft="20dp"-->
+<!--        android:layout_marginRight="20dp"-->
+<!--        android:background="@drawable/button_upload"-->
+<!--        android:fontFamily="@font/roboto"-->
+<!--        android:gravity="center"-->
+<!--        android:text="Upload"-->
+<!--        android:textColor="#fff"-->
+<!--        android:textSize="16sp"-->
+<!--        android:textStyle="bold" />-->
+
+
+        <com.spark.submitbutton.SubmitButton
+            android:id="@+id/gst_certificateupload"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Submit"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:sub_btn_background="#07A2B8"
+            app:sub_btn_duration="3000"
+            app:sub_btn_line_color="#77B1AD"
+            app:sub_btn_ripple_color="#77B1AD"
+            app:sub_btn_tick_color="@color/white" />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

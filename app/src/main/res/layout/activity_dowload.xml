@@ -131,6 +131,20 @@
                     android:layout_gravity="center"
                     app:textSize="8sp" />
 
+                <com.spark.submitbutton.SubmitButton
+                    android:id="@+id/button_animation"
+                    android:layout_width="200dp"
+                    android:layout_height="80dp"
+                    android:text="Submit"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="@color/gray"
+                    app:sub_btn_background="@color/white"
+                    app:sub_btn_duration="3000"
+                    app:sub_btn_line_color="@color/green"
+                    app:sub_btn_ripple_color="@color/green"
+                    app:sub_btn_tick_color="@color/white" />
+
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

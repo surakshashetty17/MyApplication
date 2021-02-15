@@ -29,6 +29,7 @@ import android.widget.Toast;
 import android.widget.VideoView;
 
 import com.cepheuen.elegantnumberbutton.view.ElegantNumberButton;
+import com.spark.submitbutton.SubmitButton;
 
 import java.util.Calendar;
 import java.util.TimeZone;
@@ -45,6 +46,8 @@ public class DowloadActivity extends AppCompatActivity implements DatePickerDial
 
     Switch simple_switch;
     ElegantNumberButton button_ele;
+
+    SubmitButton submitButton;
 
 
     private AnimationDrawable animationDrawable;
@@ -164,6 +167,14 @@ public class DowloadActivity extends AppCompatActivity implements DatePickerDial
 //                Log.d("Elegent number button","Selected: "+num);
 //            }
 //        });
+
+        submitButton = (SubmitButton) findViewById(R.id.button_animation);
+        submitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("Animation", "onClick: Submit");
+            }
+        });
 
     }
 
