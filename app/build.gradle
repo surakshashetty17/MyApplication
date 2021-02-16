@@ -56,5 +56,7 @@ dependencies {
 
     implementation 'me.spark:submitbutton:1.0.1'
 
+    implementation "com.airbnb.android:lottie:3.4.0"
+
 
 }

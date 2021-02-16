@@ -32,7 +32,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="60dp"
-        android:layout_marginBottom="60dp">
+        android:layout_marginBottom="10dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -156,6 +156,24 @@
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/animationView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="30dp"
+                app:lottie_rawRes="@raw/animation"
+                app:lottie_loop="true"/>
+<!--            this code will be used to play animation continuously-->
+<!--            app:lottie_autoPlay="true"-->
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/animationView1"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                app:lottie_rawRes="@raw/cannon"
+                app:lottie_loop="true"/>
 
         </LinearLayout>
     </ScrollView>

@@ -43,7 +43,7 @@ public class GST_CertificateActivity extends AppCompatActivity {
                         Intent i = new Intent(GST_CertificateActivity.this,UploadGstActivity.class);
                         startActivity(i);
                     }
-                }, 4000); //Time in milisecond
+                }, 5000); //Time in milisecond
 //                Intent i = new Intent(GST_CertificateActivity.this,UploadGstActivity.class);
 //                startActivity(i);
             }
