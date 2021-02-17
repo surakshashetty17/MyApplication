@@ -145,6 +145,14 @@
                     app:sub_btn_ripple_color="@color/green"
                     app:sub_btn_tick_color="@color/white" />
 
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/button_animation1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:lottie_rawRes="@raw/button_animation"
+                    app:lottie_loop="true"/>
+
+
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

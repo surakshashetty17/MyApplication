@@ -32,7 +32,7 @@ public class GST_CertificateActivity extends AppCompatActivity {
             }
         });
 
-        submitButton = (SubmitButton) findViewById(R.id.gst_certificateupload);
+        submitButton = (SubmitButton) findViewById(R.id.gst_certificateupload1);
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

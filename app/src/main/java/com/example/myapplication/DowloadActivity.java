@@ -18,6 +18,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -28,6 +29,7 @@ import android.widget.Switch;
 import android.widget.Toast;
 import android.widget.VideoView;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.cepheuen.elegantnumberbutton.view.ElegantNumberButton;
 import com.spark.submitbutton.SubmitButton;
 
@@ -43,11 +45,11 @@ public class DowloadActivity extends AppCompatActivity implements DatePickerDial
     private int _day;
     private int _month;
     private int _birthYear;
-
     Switch simple_switch;
     ElegantNumberButton button_ele;
-
     SubmitButton submitButton;
+    LottieAnimationView lt_loading_view;
+
 
 
     private AnimationDrawable animationDrawable;
@@ -173,6 +175,27 @@ public class DowloadActivity extends AppCompatActivity implements DatePickerDial
             @Override
             public void onClick(View v) {
                 Log.d("Animation", "onClick: Submit");
+            }
+        });
+
+
+        lt_loading_view = (LottieAnimationView) findViewById(R.id.button_animation1);
+
+        lt_loading_view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                lt_loading_view.playAnimation();
+
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        // do something after 2s = 2000 miliseconds
+                        lt_loading_view.pauseAnimation();
+                        Intent i = new Intent(DowloadActivity.this,ActivateSubscribeActivity.class);
+                        startActivity(i);
+
+                    }
+                }, 1000); //Time in milisecond
             }
         });
 
