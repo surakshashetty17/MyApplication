@@ -50,8 +50,6 @@ public class DowloadActivity extends AppCompatActivity implements DatePickerDial
     SubmitButton submitButton;
     LottieAnimationView lt_loading_view;
 
-
-
     private AnimationDrawable animationDrawable;
     private ImageView mProgressBar;
 
