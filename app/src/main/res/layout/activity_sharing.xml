@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SharingActivity">
+    tools:context=".SharingActivity"
+    android:background="@drawable/background">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -33,7 +34,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_marginTop="60dp">
+        android:layout_marginTop="55dp">
 
         <ImageView
             android:id="@+id/share"
@@ -49,18 +50,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="5dp" />
+            android:layout_marginTop="5dp"
+            android:background="@drawable/transparent" />
 
         <EditText
             android:id="@+id/editreview"
             android:layout_width="300dp"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:background="@drawable/edittext"
-            android:gravity="left"
+            android:foregroundGravity="center"
+            android:background="@drawable/transparent"
+            android:gravity="left|center"
             android:hint="Review"
-            android:padding="5dp"
+            android:padding="10dp"
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="italic" />
@@ -72,7 +75,9 @@
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:gravity="center"
-            android:text="submit" />
+            android:text="submit"
+            android:padding="10dp"
+            android:background="@drawable/transparent"/>
 
         <TextView
             android:id="@+id/textrating"
@@ -92,8 +97,10 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
+            android:padding="10dp"
             android:gravity="center"
-            android:text="Alter Dialog" />
+            android:text="Alter Dialog"
+            android:background="@drawable/transparent"/>
 
     </LinearLayout>
 
