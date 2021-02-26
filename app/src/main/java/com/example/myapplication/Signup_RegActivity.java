@@ -2,10 +2,13 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.InputType;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -38,8 +41,11 @@ public class Signup_RegActivity extends AppCompatActivity {
     ImageButton img1, img2;  //  password eye
     private int passwordNotVisible = 1;
     String sign_url = "http://192.168.0.147/mobile-api/index.php/api/signup";
-    Button register;
+    Button register,buttonConfirm;
     TextView login;
+    EditText confirmotp;
+    private RequestQueue requestQueue;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -161,6 +167,8 @@ public class Signup_RegActivity extends AppCompatActivity {
                         try {
                             JSONObject obj = new JSONObject(response);
 
+                            confirmOtp();
+
                             Toast.makeText(getApplicationContext(), obj.getString("message"),Toast.LENGTH_LONG).show();
                             startActivity(new Intent(getApplicationContext(), SignInActivity.class));
 
@@ -188,10 +196,122 @@ public class Signup_RegActivity extends AppCompatActivity {
             }
         };
 
-        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(stringRequest);
     }
 
+
+    private void confirmOtp() throws JSONException {
+        //Creating a LayoutInflater object for the dialog box
+        LayoutInflater li = LayoutInflater.from(this);
+        //Creating a view to get the dialog box
+        View confirmDialog = li.inflate(R.layout.dialog_confirm, null);
+
+        //Initizliaing confirm button fo dialog box and edittext of dialog box
+        buttonConfirm = (Button) confirmDialog.findViewById(R.id.buttonConfirm);
+        confirmotp = (EditText) confirmDialog.findViewById(R.id.editTextOtp);
+
+        //Creating an alertdialog builder
+        AlertDialog.Builder alert = new AlertDialog.Builder(this);
+
+        //Adding our dialog box to the view of alert dialog
+        alert.setView(confirmDialog);
+
+        //Creating an alert dialog
+        final AlertDialog alertDialog = alert.create();
+
+        //Displaying the alert dialog
+        alertDialog.show();
+
+        //On the click of the confirm button from alert dialog
+        buttonConfirm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Hiding the alert dialog
+                alertDialog.dismiss();
+
+                //Displaying a progressbar
+                final ProgressDialog loading = ProgressDialog.show(Signup_RegActivity.this, "Authenticating", "Please wait while we check the entered code", false,false);
+
+                //Getting the user entered otp from edittext
+                final String fullname=User_name.getText().toString().trim();
+                final String mobile=Mobile.getText().toString().trim();
+                final String email=Email.getText().toString().trim();
+                final String pass=Password.getText().toString().trim();
+                final String otp = confirmotp.getText().toString().trim();
+                //Creating an string request
+                StringRequest stringRequest = new StringRequest(Request.Method.POST,sign_url ,
+                        new Response.Listener<String>() {
+                            @Override
+                            public void onResponse(String response) {
+                                try {
+                                    JSONObject objo = new JSONObject(response);
+
+                                    System.out.println(objo);
+
+                                    int otp=objo.getInt("status");
+                                    System.out.println(objo);
+                                    //if the server response is success
+                                    if(otp==1){
+                                        //dismissing the progressbar
+
+                                        loading.dismiss();
+
+                                        //Starting a new activity
+                                        startActivity(new Intent(Signup_RegActivity.this, SignInActivity.class));
+                                    }else{
+                                        //Displaying a toast if the otp entered is wrong
+                                        Toast.makeText(Signup_RegActivity.this,"Wrong OTP Please Try Again",Toast.LENGTH_LONG).show();
+                                        try {
+                                            //Asking user to enter otp again
+                                            confirmOtp();
+                                        } catch (JSONException e) {
+                                            e.printStackTrace();
+                                        }
+                                    }
+
+                                }
+                                catch (JSONException e)
+                                {
+                                    e.printStackTrace();
+                                }
+
+                            }
+                        },
+                        new Response.ErrorListener() {
+                            @Override
+                            public void onErrorResponse(VolleyError error) {
+                                alertDialog.dismiss();
+                                Toast.makeText(Signup_RegActivity.this, error.getMessage(), Toast.LENGTH_LONG).show();
+                            }
+                        }){
+                    @Override
+                    protected Map<String, String> getParams() throws AuthFailureError {
+                        Map<String,String> params = new HashMap<String, String>();
+                        //Adding the parameters otp and username
+                        params.put("fullname",fullname);
+                        params.put("mobile",mobile );
+                        params.put("email",email);
+                        params.put("password",pass);
+                        params.put("otp",otp);
+                        return params;
+                    }
+                };
+
+                //Adding the request to the queue
+                requestQueue.add(stringRequest);
+            }
+        });
+
+    }
+
+//    @Override
+//    public void onBackPressed() {
+//        Intent i=new Intent(Signup_RegActivity.this,SignInActivity.class);
+//        i.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+//        startActivity(i);
+//        finish();
+//    }
 
 //        URL url = new URL("http://192.168.0.147/mobile-api/index.php/api/signup");
 //        HttpURLConnection con = (HttpURLConnection) url.openConnection();

@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DiffrenceLayoutActivity"
-    android:background="@drawable/background1">
+    android:background="@drawable/background3">
+<!--   or     background4-->
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -28,67 +29,226 @@
             android:textStyle="bold" />
     </androidx.appcompat.widget.Toolbar>
 
-    <LinearLayout
+    <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_marginTop="55dp"
-        android:gravity="center">
+        android:layout_marginTop="60dp">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:gravity="center"
-            android:layout_gravity="center">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <com.github.mmin18.widget.RealtimeBlurView
-                android:id="@+id/blur_view"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_gravity="center"
-                app:realtimeBlurRadius="20dp"
-                app:realtimeOverlayColor="#00F0F8FF">
-
-            </com.github.mmin18.widget.RealtimeBlurView>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginTop="47dp"
-                android:layout_marginBottom="47dp"
+                android:layout_height="150dp"
                 android:gravity="center"
-                android:orientation="vertical">
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp">
 
-                <Button
-                    android:id="@+id/diffconstraintlayout"
-                    android:layout_width="130dp"
-                    android:layout_height="wrap_content"
+                <com.github.mmin18.widget.RealtimeBlurView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
                     android:layout_gravity="center"
-                    android:gravity="center"
-                    android:text="Constraint layout" />
+                    app:realtimeBlurRadius="20dp"
+                    app:realtimeOverlayColor="#00F0F8FF">
 
-                <Button
-                    android:id="@+id/difflinearlayout"
-                    android:layout_width="130dp"
-                    android:layout_height="wrap_content"
+                </com.github.mmin18.widget.RealtimeBlurView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="0dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/diffconstraintlayout"
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Constraint layout"
+                        android:textColor="#052C4B"
+                        android:background="@drawable/button_white"/>
+
+                    <Button
+                        android:id="@+id/difflinearlayout"
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Constraint layout"
+                        android:textColor="#052C4B"
+                        android:background="@drawable/button_white"
+                        android:layout_marginTop="10dp"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp">
+
+                <com.github.mmin18.widget.RealtimeBlurView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
                     android:layout_gravity="center"
+                    app:realtimeBlurRadius="20dp"
+                    app:realtimeOverlayColor="#00F0F8FF">
+
+                </com.github.mmin18.widget.RealtimeBlurView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
                     android:gravity="center"
-                    android:text="Linear layout" />
-            </LinearLayout>
-        </RelativeLayout>
+                    android:orientation="vertical">
 
-<!--        <com.github.mmin18.widget.RealtimeBlurView-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            app:realtimeBlurRadius="20dp"-->
-<!--            app:realtimeOverlayColor="#8000" />-->
+                    <Button
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Constraint layout"
+                        android:textColor="#052C4B"
+                        android:background="@drawable/button_white"/>
+
+                    <Button
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Linear layout"
+                        android:textColor="#052C4B"
+                        android:background="@drawable/button_white"
+                        android:layout_marginTop="10dp"/>
+                </LinearLayout>
+            </RelativeLayout>
 
 
-    </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp">
+
+                <com.github.mmin18.widget.RealtimeBlurView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_gravity="center"
+                    app:realtimeBlurRadius="20dp"
+                    app:realtimeOverlayColor="#00F0F8FF">
+
+                </com.github.mmin18.widget.RealtimeBlurView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Constraint layout"
+                        android:textColor="#052C4B"
+                        android:background="@drawable/button_white"/>
+
+                    <Button
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Linear layout"
+                        android:textColor="#052C4B"
+                        android:background="@drawable/button_white"
+                        android:layout_marginTop="10dp"/>
+                </LinearLayout>
+            </RelativeLayout>
 
 
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp">
+
+                <com.github.mmin18.widget.RealtimeBlurView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_gravity="center"
+                    app:realtimeBlurRadius="20dp"
+                    app:realtimeOverlayColor="#00F0F8FF">
+
+                </com.github.mmin18.widget.RealtimeBlurView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Constraint layout"
+                        android:textColor="#052C4B"
+                        android:background="@drawable/button_white"/>
+
+                    <Button
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Linear layout"
+                        android:textColor="#052C4B"
+                        android:background="@drawable/button_white"
+                        android:layout_marginTop="10dp"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <!--        <com.github.mmin18.widget.RealtimeBlurView-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            app:realtimeBlurRadius="20dp"-->
+            <!--            app:realtimeOverlayColor="#8000" />-->
+
+        </LinearLayout>
+
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
