@@ -41,6 +41,7 @@ public class Signup_RegActivity extends AppCompatActivity {
     ImageButton img1, img2;  //  password eye
     private int passwordNotVisible = 1;
     String sign_url = "http://192.168.0.147/mobile-api/index.php/api/signup";
+    String sms="api/user/sign_up_sms";
     Button register,buttonConfirm;
     TextView login;
     EditText confirmotp;
@@ -160,7 +161,7 @@ public class Signup_RegActivity extends AppCompatActivity {
     private void register(final String getuserName, final String getuserMobile,
                           final String getuserEmail, final String getuserPassword, final String getReenterPass){
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://192.168.0.147/mobile-api/index.php/api/signup",
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, sms,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
