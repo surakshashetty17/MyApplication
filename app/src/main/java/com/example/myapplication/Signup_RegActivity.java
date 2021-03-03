@@ -133,7 +133,8 @@ public class Signup_RegActivity extends AppCompatActivity {
                     } else {
 //                        if (Constants.isOnline(getApplicationContext())) {
 ////                            //String SIGNUP_URL = CommonUtils.baseurl + "api/user/sign_up";
-                            register(userName, userMobile, userEmail, userPassword, userRePassword);
+                        String apikey = "4503b318cc4c599ba00e1e92a70559ecaa911a2cfea20b08bed568c98869e99e";
+                            register(userName, userMobile, userEmail, userPassword, userRePassword,apikey);
 ////                        } else {
 //                            Toast.makeText(getApplicationContext(),"connection failed",Toast.LENGTH_LONG).show();
 //                        }
@@ -159,19 +160,29 @@ public class Signup_RegActivity extends AppCompatActivity {
     }
 
     private void register(final String getuserName, final String getuserMobile,
-                          final String getuserEmail, final String getuserPassword, final String getReenterPass){
+                          final String getuserEmail, final String getuserPassword, final String getReenterPass, final String getapikey){
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, sms,
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://13.232.113.112/nanocart_api/index.php/Api/signup_otp",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
                         try {
+
                             JSONObject obj = new JSONObject(response);
-
-                            confirmOtp();
-
-                            Toast.makeText(getApplicationContext(), obj.getString("message"),Toast.LENGTH_LONG).show();
-                            startActivity(new Intent(getApplicationContext(), SignInActivity.class));
+                            int error = obj.getInt("status");
+                            //if no error in response
+                            if(error==1) {
+                                confirmOtp();
+                                Toast.makeText(getApplicationContext(), obj.getString("message"), Toast.LENGTH_SHORT).show();
+//                            startActivity(new Intent(SignupActivity.this, SignInActivity.class));
+//                            finish();
+                            } else {
+                                Toast.makeText(getApplicationContext(), obj.getString("message"), Toast.LENGTH_SHORT).show();
+                            }
+//                            JSONObject obj = new JSONObject(response);
+//                            confirmOtp();
+//                            Toast.makeText(getApplicationContext(), obj.getString("message"),Toast.LENGTH_LONG).show();
+//                            startActivity(new Intent(getApplicationContext(), SignInActivity.class));
 
                         } catch (JSONException e) {
                             e.printStackTrace();
@@ -193,6 +204,7 @@ public class Signup_RegActivity extends AppCompatActivity {
                 params.put("email",getuserEmail);
                 params.put("password", getuserPassword);
                 params.put("cpassword",getReenterPass);
+                params.put("request_otp_api_key",getapikey);
                 return params;
             }
         };
@@ -240,8 +252,9 @@ public class Signup_RegActivity extends AppCompatActivity {
                 final String email=Email.getText().toString().trim();
                 final String pass=Password.getText().toString().trim();
                 final String otp = confirmotp.getText().toString().trim();
+                final String apikey1 = "7c8718bdc78be44bf7f3e5554152c20e99216dcb93ac9aefb8857fd7f9d02102";
                 //Creating an string request
-                StringRequest stringRequest = new StringRequest(Request.Method.POST,sign_url ,
+                StringRequest stringRequest = new StringRequest(Request.Method.POST,"http://13.232.113.112/nanocart_api/index.php/Api/signup" ,
                         new Response.Listener<String>() {
                             @Override
                             public void onResponse(String response) {
@@ -295,6 +308,7 @@ public class Signup_RegActivity extends AppCompatActivity {
                         params.put("email",email);
                         params.put("password",pass);
                         params.put("otp",otp);
+                        params.put("signup_api_key",apikey1);
                         return params;
                     }
                 };

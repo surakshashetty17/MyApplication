@@ -166,17 +166,27 @@ public class SignupActivity extends AppCompatActivity {
     private void register(final String getshopName,final String getuserName, final String getuserMobile,
                           final String getuserEmail,final String getuserpincode, final String getuserPassword, final String getReenterPass){
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, sms,
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://13.232.113.112/nanocart_api/index.php/Api/signup",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
                         try {
                             JSONObject obj = new JSONObject(response);
+                            int error = obj.getInt("status");
+                            //if no error in response
+                            if(error==1) {
 
-                            confirmOtp();
-
-                            Toast.makeText(getApplicationContext(), obj.getString("message"),Toast.LENGTH_LONG).show();
-                            startActivity(new Intent(getApplicationContext(), SignInActivity.class));
+                                confirmOtp();
+                                Toast.makeText(getApplicationContext(), obj.getString("message"), Toast.LENGTH_SHORT).show();
+//                            startActivity(new Intent(SignupActivity.this, SignInActivity.class));
+//                            finish();
+                            } else {
+                                Toast.makeText(getApplicationContext(), obj.getString("message"), Toast.LENGTH_SHORT).show();
+                            }
+//                            JSONObject obj = new JSONObject(response);
+//                            confirmOtp();
+//                            Toast.makeText(getApplicationContext(), obj.getString("message"),Toast.LENGTH_LONG).show();
+//                            startActivity(new Intent(getApplicationContext(), SignInActivity.class));
 
                         } catch (JSONException e) {
                             e.printStackTrace();
