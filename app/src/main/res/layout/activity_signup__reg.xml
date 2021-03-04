@@ -38,6 +38,30 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView11"
         app:layout_constraintVertical_bias="0.0" />
 
+    <EditText
+        android:id="@+id/signup_businessname"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/edittext"
+        android:drawablePadding="5dp"
+        android:ems="10"
+        android:fontFamily="@font/roboto"
+        android:hint="Business Name"
+        android:inputType="textPersonName"
+        android:paddingLeft="6dp"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.500"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview1"
+        app:layout_constraintVertical_bias="0.0" />
+
+
 
     <EditText
         android:id="@+id/signup_username"
@@ -59,7 +83,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.500"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textview1"
+        app:layout_constraintTop_toBottomOf="@+id/signup_businessname"
         app:layout_constraintVertical_bias="0.0" />
 
 

@@ -222,6 +222,30 @@
                 android:text="Sugn Up" />
 
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/mobile"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="Mobile Number" />
+
+<!--            <Button-->
+<!--                android:id="@+id/sign_up"-->
+<!--                android:layout_width="130dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--                android:text="Sugn Up" />-->
+
+        </LinearLayout>
+
 
     </LinearLayout>
 

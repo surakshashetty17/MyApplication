@@ -37,7 +37,7 @@ import java.util.regex.Pattern;
 
 public class Signup_RegActivity extends AppCompatActivity {
 
-    EditText User_name,Email,Mobile,Password,ReenterPass;
+    EditText Business_name,User_name,Email,Mobile,Password,ReenterPass;
     ImageButton img1, img2;  //  password eye
     private int passwordNotVisible = 1;
     String sign_url = "http://192.168.0.147/mobile-api/index.php/api/signup";
@@ -53,6 +53,7 @@ public class Signup_RegActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup__reg);
 
+        Business_name = (EditText) findViewById(R.id.signup_businessname);
         User_name = (EditText) findViewById(R.id.signup_username);
         Email = (EditText) findViewById(R.id.signup_email);
         Mobile = (EditText) findViewById(R.id.signup_mobilenumber);
@@ -101,6 +102,7 @@ public class Signup_RegActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                String businessname = Business_name.getText().toString();
                 String userName = User_name.getText().toString();
                 String userEmail = Email.getText().toString();
                 String userMobile = Mobile.getText().toString();
@@ -118,9 +120,11 @@ public class Signup_RegActivity extends AppCompatActivity {
                 if (userName.equalsIgnoreCase("") || userName.length() >= 3 || userEmail.equalsIgnoreCase("") || userEmail.length() >= 8 ||
                         userMobile.equalsIgnoreCase("") || userMobile.length() == 10 || userPassword.equalsIgnoreCase("") || userPassword.length() >= 5 || userRePassword.equalsIgnoreCase("") || userRePassword.length() >= 5)
                 {
-                    if (userName.equalsIgnoreCase("")) {
+                    if (businessname.equalsIgnoreCase("")) {
+                        Business_name.setError("Please Enter Business Name ");
+                    }else if (userName.equalsIgnoreCase("")) {
                         User_name.setError("Please Enter User Name ");
-                    } else if (userEmail.equalsIgnoreCase("") || !m.find()) {
+                    }else if (userEmail.equalsIgnoreCase("") || !m.find()) {
                         Email.setError("Please Enter Valid Email ");
                     }else if (userMobile.equalsIgnoreCase("") || !mob.find()) {
                         Mobile.setError("Pleas Enter Valid Mobile Number");
@@ -133,8 +137,8 @@ public class Signup_RegActivity extends AppCompatActivity {
                     } else {
 //                        if (Constants.isOnline(getApplicationContext())) {
 ////                            //String SIGNUP_URL = CommonUtils.baseurl + "api/user/sign_up";
-                        String apikey = "4503b318cc4c599ba00e1e92a70559ecaa911a2cfea20b08bed568c98869e99e";
-                            register(userName, userMobile, userEmail, userPassword, userRePassword,apikey);
+                        String apikey = "7c8718bdc78be44bf7f3e5554152c20e99216dcb93ac9aefb8857fd7f9d02102";
+                            register(businessname,userName, userMobile, userEmail, userPassword, userRePassword,apikey);
 ////                        } else {
 //                            Toast.makeText(getApplicationContext(),"connection failed",Toast.LENGTH_LONG).show();
 //                        }
@@ -159,10 +163,10 @@ public class Signup_RegActivity extends AppCompatActivity {
         });
     }
 
-    private void register(final String getuserName, final String getuserMobile,
+    private void register(final String getbusinessName,final String getuserName, final String getuserMobile,
                           final String getuserEmail, final String getuserPassword, final String getReenterPass, final String getapikey){
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://13.232.113.112/nanocart_api/index.php/Api/signup_otp",
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://13.232.113.112/nanocart_api/index.php/Api/nc_business_signup",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -172,7 +176,9 @@ public class Signup_RegActivity extends AppCompatActivity {
                             int error = obj.getInt("status");
                             //if no error in response
                             if(error==1) {
-                                confirmOtp();
+//                                confirmOtp();
+                                Toast.makeText(getApplicationContext(), obj.getString("message"), Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(Signup_RegActivity.this, SignInActivity.class));
                                 Toast.makeText(getApplicationContext(), obj.getString("message"), Toast.LENGTH_SHORT).show();
 //                            startActivity(new Intent(SignupActivity.this, SignInActivity.class));
 //                            finish();
@@ -199,12 +205,13 @@ public class Signup_RegActivity extends AppCompatActivity {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> params  = new HashMap<>();
-                params.put("username",getuserName);
+                params.put("business_name",getbusinessName);
+                params.put("contact_person",getuserName);
                 params.put("mobile", getuserMobile);
                 params.put("email",getuserEmail);
                 params.put("password", getuserPassword);
                 params.put("cpassword",getReenterPass);
-                params.put("request_otp_api_key",getapikey);
+                params.put("signup_api_key",getapikey);
                 return params;
             }
         };
@@ -214,111 +221,111 @@ public class Signup_RegActivity extends AppCompatActivity {
     }
 
 
-    private void confirmOtp() throws JSONException {
-        //Creating a LayoutInflater object for the dialog box
-        LayoutInflater li = LayoutInflater.from(this);
-        //Creating a view to get the dialog box
-        View confirmDialog = li.inflate(R.layout.dialog_confirm, null);
-
-        //Initizliaing confirm button fo dialog box and edittext of dialog box
-        buttonConfirm = (Button) confirmDialog.findViewById(R.id.buttonConfirm);
-        confirmotp = (EditText) confirmDialog.findViewById(R.id.editTextOtp);
-
-        //Creating an alertdialog builder
-        AlertDialog.Builder alert = new AlertDialog.Builder(this);
-
-        //Adding our dialog box to the view of alert dialog
-        alert.setView(confirmDialog);
-
-        //Creating an alert dialog
-        final AlertDialog alertDialog = alert.create();
-
-        //Displaying the alert dialog
-        alertDialog.show();
-
-        //On the click of the confirm button from alert dialog
-        buttonConfirm.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //Hiding the alert dialog
-                alertDialog.dismiss();
-
-                //Displaying a progressbar
-                final ProgressDialog loading = ProgressDialog.show(Signup_RegActivity.this, "Authenticating", "Please wait while we check the entered code", false,false);
-
-                //Getting the user entered otp from edittext
-                final String fullname=User_name.getText().toString().trim();
-                final String mobile=Mobile.getText().toString().trim();
-                final String email=Email.getText().toString().trim();
-                final String pass=Password.getText().toString().trim();
-                final String otp = confirmotp.getText().toString().trim();
-                final String apikey1 = "7c8718bdc78be44bf7f3e5554152c20e99216dcb93ac9aefb8857fd7f9d02102";
-                //Creating an string request
-                StringRequest stringRequest = new StringRequest(Request.Method.POST,"http://13.232.113.112/nanocart_api/index.php/Api/signup" ,
-                        new Response.Listener<String>() {
-                            @Override
-                            public void onResponse(String response) {
-                                try {
-                                    JSONObject objo = new JSONObject(response);
-
-                                    System.out.println(objo);
-
-                                    int otp=objo.getInt("status");
-                                    System.out.println(objo);
-                                    //if the server response is success
-                                    if(otp==1){
-                                        //dismissing the progressbar
-
-                                        loading.dismiss();
-
-                                        //Starting a new activity
-                                        startActivity(new Intent(Signup_RegActivity.this, SignInActivity.class));
-                                    }else{
-                                        //Displaying a toast if the otp entered is wrong
-                                        Toast.makeText(Signup_RegActivity.this,"Wrong OTP Please Try Again",Toast.LENGTH_LONG).show();
-                                        try {
-                                            //Asking user to enter otp again
-                                            confirmOtp();
-                                        } catch (JSONException e) {
-                                            e.printStackTrace();
-                                        }
-                                    }
-
-                                }
-                                catch (JSONException e)
-                                {
-                                    e.printStackTrace();
-                                }
-
-                            }
-                        },
-                        new Response.ErrorListener() {
-                            @Override
-                            public void onErrorResponse(VolleyError error) {
-                                alertDialog.dismiss();
-                                Toast.makeText(Signup_RegActivity.this, error.getMessage(), Toast.LENGTH_LONG).show();
-                            }
-                        }){
-                    @Override
-                    protected Map<String, String> getParams() throws AuthFailureError {
-                        Map<String,String> params = new HashMap<String, String>();
-                        //Adding the parameters otp and username
-                        params.put("fullname",fullname);
-                        params.put("mobile",mobile );
-                        params.put("email",email);
-                        params.put("password",pass);
-                        params.put("otp",otp);
-                        params.put("signup_api_key",apikey1);
-                        return params;
-                    }
-                };
-
-                //Adding the request to the queue
-                requestQueue.add(stringRequest);
-            }
-        });
-
-    }
+//    private void confirmOtp() throws JSONException {
+//        //Creating a LayoutInflater object for the dialog box
+//        LayoutInflater li = LayoutInflater.from(this);
+//        //Creating a view to get the dialog box
+//        View confirmDialog = li.inflate(R.layout.dialog_confirm, null);
+//
+//        //Initizliaing confirm button fo dialog box and edittext of dialog box
+//        buttonConfirm = (Button) confirmDialog.findViewById(R.id.buttonConfirm);
+//        confirmotp = (EditText) confirmDialog.findViewById(R.id.editTextOtp);
+//
+//        //Creating an alertdialog builder
+//        AlertDialog.Builder alert = new AlertDialog.Builder(this);
+//
+//        //Adding our dialog box to the view of alert dialog
+//        alert.setView(confirmDialog);
+//
+//        //Creating an alert dialog
+//        final AlertDialog alertDialog = alert.create();
+//
+//        //Displaying the alert dialog
+//        alertDialog.show();
+//
+//        //On the click of the confirm button from alert dialog
+//        buttonConfirm.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                //Hiding the alert dialog
+//                alertDialog.dismiss();
+//
+//                //Displaying a progressbar
+//                final ProgressDialog loading = ProgressDialog.show(Signup_RegActivity.this, "Authenticating", "Please wait while we check the entered code", false,false);
+//
+//                //Getting the user entered otp from edittext
+//                final String fullname=User_name.getText().toString().trim();
+//                final String mobile=Mobile.getText().toString().trim();
+//                final String email=Email.getText().toString().trim();
+//                final String pass=Password.getText().toString().trim();
+//                final String otp = confirmotp.getText().toString().trim();
+//                final String apikey1 = "7c8718bdc78be44bf7f3e5554152c20e99216dcb93ac9aefb8857fd7f9d02102";
+//                //Creating an string request
+//                StringRequest stringRequest = new StringRequest(Request.Method.POST,"http://13.232.113.112/nanocart_api/index.php/Api/signup" ,
+//                        new Response.Listener<String>() {
+//                            @Override
+//                            public void onResponse(String response) {
+//                                try {
+//                                    JSONObject objo = new JSONObject(response);
+//
+//                                    System.out.println(objo);
+//
+//                                    int otp=objo.getInt("status");
+//                                    System.out.println(objo);
+//                                    //if the server response is success
+//                                    if(otp==1){
+//                                        //dismissing the progressbar
+//
+//                                        loading.dismiss();
+//
+//                                        //Starting a new activity
+//                                        startActivity(new Intent(Signup_RegActivity.this, SignInActivity.class));
+//                                    }else{
+//                                        //Displaying a toast if the otp entered is wrong
+//                                        Toast.makeText(Signup_RegActivity.this,"Wrong OTP Please Try Again",Toast.LENGTH_LONG).show();
+//                                        try {
+//                                            //Asking user to enter otp again
+//                                            confirmOtp();
+//                                        } catch (JSONException e) {
+//                                            e.printStackTrace();
+//                                        }
+//                                    }
+//
+//                                }
+//                                catch (JSONException e)
+//                                {
+//                                    e.printStackTrace();
+//                                }
+//
+//                            }
+//                        },
+//                        new Response.ErrorListener() {
+//                            @Override
+//                            public void onErrorResponse(VolleyError error) {
+//                                alertDialog.dismiss();
+//                                Toast.makeText(Signup_RegActivity.this, error.getMessage(), Toast.LENGTH_LONG).show();
+//                            }
+//                        }){
+//                    @Override
+//                    protected Map<String, String> getParams() throws AuthFailureError {
+//                        Map<String,String> params = new HashMap<String, String>();
+//                        //Adding the parameters otp and username
+//                        params.put("fullname",fullname);
+//                        params.put("mobile",mobile );
+//                        params.put("email",email);
+//                        params.put("password",pass);
+//                        params.put("otp",otp);
+//                        params.put("signup_api_key",apikey1);
+//                        return params;
+//                    }
+//                };
+//
+//                //Adding the request to the queue
+//                requestQueue.add(stringRequest);
+//            }
+//        });
+//
+//    }
 
 //    @Override
 //    public void onBackPressed() {
