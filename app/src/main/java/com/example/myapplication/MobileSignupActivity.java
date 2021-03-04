@@ -60,15 +60,16 @@ public class MobileSignupActivity extends AppCompatActivity {
                     if (userMobile.equalsIgnoreCase("") || !mob.find()) {
                         Mobile.setError("Pleas Enter Valid Mobile Number");
                     } else {
-//                        if (Constants.isOnline(getApplicationContext())) {
-////                            //String SIGNUP_URL = CommonUtils.baseurl + "api/user/sign_up";
-                        String apikey = "4503b318cc4c599ba00e1e92a70559ecaa911a2cfea20b08bed568c98869e99e";
-                        register(userMobile,apikey);
-////                        } else {
-//                            Toast.makeText(getApplicationContext(),"connection failed",Toast.LENGTH_LONG).show();
-//                        }
-//                        Intent i = new Intent(Signup_RegActivity.this,SignInActivity.class);
-//                        startActivity(i);
+                        if (Constants.isOnline(getApplicationContext())) {
+                            String apikey = "4503b318cc4c599ba00e1e92a70559ecaa911a2cfea20b08bed568c98869e99e";
+                            register(userMobile,apikey);
+                        } else {
+                            Toast.makeText(getApplicationContext(),"No internet Connection",Toast.LENGTH_LONG).show();
+                        }
+
+//                        String apikey = "4503b318cc4c599ba00e1e92a70559ecaa911a2cfea20b08bed568c98869e99e";
+//                        register(userMobile,apikey);
+
                     }
                 }
                 else {

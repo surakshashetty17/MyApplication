@@ -31,7 +31,9 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".MobileSignupActivity"></activity>
+        <activity android:name=".ProductActivity"></activity>
+        <activity android:name=".ServiceActivity" />
+        <activity android:name=".MobileSignupActivity" />
         <activity android:name=".Signup_RegActivity" />
         <activity android:name=".NewOrderActivity" />
         <activity android:name=".HelpDeskActivity" />

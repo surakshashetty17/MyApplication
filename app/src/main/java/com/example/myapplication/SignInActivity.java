@@ -104,7 +104,7 @@ public class SignInActivity extends AppCompatActivity {
 //                    Toast.makeText(SignInActivity.this, "ID/Password cannot be empty. Please check", Toast.LENGTH_LONG).show();
 //                } else {
                     // call the webservice for login
-                    String url = "http://13.232.113.112/nanocart_api/index.php/Api/signin";
+                    String url = "http://13.232.113.112/nanocart_api/index.php/Api/nc_business_signin";
                     String apikey = "e7ae715d21b12b5421420dbb7636a3a37ff40dc73df25691a57fb38cf9fa25a2";
                 Log.d("login","login"+url);
 
