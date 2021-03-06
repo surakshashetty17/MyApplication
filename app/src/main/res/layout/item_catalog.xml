@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/item_cardview"
+    android:layout_width="match_parent"
+    android:layout_height="160dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@drawable/edittext">
+
+        <TextView
+            android:id="@+id/item_id"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:text="item_id"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            android:paddingLeft="10dp"/>
+
+        <TextView
+            android:id="@+id/item_productname"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:text="Product Name"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            android:paddingLeft="10dp"/>
+
+        <TextView
+            android:id="@+id/item_productprice"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:text="Product Price"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            android:paddingLeft="10dp"/>
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
