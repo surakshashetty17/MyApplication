@@ -28,7 +28,7 @@ import com.google.android.gms.tasks.Task;
 public class MainActivity extends AppCompatActivity {
 
 
-    Button button,button1,buttondash1,buttondash2,buttonlocation,buttonpagenation,buttonshare,buttonimage,buttoncart,buttonfiltersearch,buttonchart,buttonpiechart,buttondiffrece,buttonnanocart,buttonbusiness,buttonsignup,buttonmobile,buttonuser,buttoncatalog;
+    Button button,button1,buttondash1,buttondash2,buttonlocation,buttonpagenation,buttonshare,buttonimage,buttoncart,buttonfiltersearch,buttonchart,buttonpiechart,buttondiffrece,buttonnanocart,buttonbusiness,buttonsignup,buttonmobile,buttonuser,buttoncatalog,buttonpage,buttonmap;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -190,6 +190,22 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this,PagenationDataActivity.class);
+                startActivity(i);
+            }
+        });
+        buttonpage = (Button)findViewById(R.id.user_page);
+        buttonpage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this,PageActivity.class);
+                startActivity(i);
+            }
+        });
+        buttonmap = (Button)findViewById(R.id.main_location);
+        buttonmap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this,LocationActivity.class);
                 startActivity(i);
             }
         });
