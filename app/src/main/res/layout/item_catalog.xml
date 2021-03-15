@@ -4,42 +4,66 @@
     android:orientation="vertical"
     android:id="@+id/item_cardview"
     android:layout_width="match_parent"
-    android:layout_height="160dp">
+    android:layout_height="200dp">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="200dp"
         android:orientation="vertical"
         android:layout_gravity="center"
         android:gravity="center"
         android:background="@drawable/edittext">
 
-        <TextView
-            android:id="@+id/item_id"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="36dp"
-            android:text="item_id"
-            android:textSize="20sp"
-            android:textStyle="italic"
-            android:paddingLeft="10dp"/>
+            android:layout_height="200dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/item_image"
+                android:layout_width="150dp"
+                android:layout_height="120dp"
+                android:layout_margin="10dp" />
 
-        <TextView
-            android:id="@+id/item_productname"
-            android:layout_width="match_parent"
-            android:layout_height="36dp"
-            android:text="Product Name"
-            android:textSize="20sp"
-            android:textStyle="italic"
-            android:paddingLeft="10dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:gravity="center">
 
-        <TextView
-            android:id="@+id/item_productprice"
-            android:layout_width="match_parent"
-            android:layout_height="36dp"
-            android:text="Product Price"
-            android:textSize="20sp"
-            android:textStyle="italic"
-            android:paddingLeft="10dp"/>
+                <TextView
+                    android:id="@+id/item_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:text="item_id"
+                    android:layout_gravity="left"
+                    android:textSize="20sp"
+                    android:textStyle="italic"
+                    android:paddingLeft="10dp"/>
+
+                <TextView
+                    android:id="@+id/item_productname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:paddingLeft="10dp"
+                    android:text="Product Name"
+                    android:textSize="20sp"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/item_productprice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Product Price"
+                    android:layout_gravity="left"
+                    android:textSize="20sp"
+                    android:textStyle="italic"
+                    android:paddingLeft="10dp"/>
+            </LinearLayout>
+        </LinearLayout>
 
 
     </LinearLayout>

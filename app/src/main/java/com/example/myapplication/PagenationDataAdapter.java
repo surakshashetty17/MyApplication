@@ -4,11 +4,14 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -37,6 +40,8 @@ public class PagenationDataAdapter extends RecyclerView.Adapter<PagenationDataAd
         holder.item_id.setText(""+pagedata.get(position).getItem_id());
         holder.item_name.setText(""+pagedata.get(position).getItem_proname());
         holder.item_price.setText(""+pagedata.get(position).getItem_proprice());
+        Picasso.get().load(pagedata.get(position).getItem_image()).into(holder.item_image);
+
     }
 
     @Override
@@ -48,12 +53,14 @@ public class PagenationDataAdapter extends RecyclerView.Adapter<PagenationDataAd
     public class MyViewHolder extends RecyclerView.ViewHolder
     {
         TextView item_id,item_name,item_price;
+        ImageView item_image;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             item_id = (TextView) itemView.findViewById(R.id.item_id);
             item_name = (TextView) itemView.findViewById(R.id.item_productname);
             item_price = (TextView) itemView.findViewById(R.id.item_productprice);
+            item_image = (ImageView) itemView.findViewById(R.id.item_image);
         }
     }
 }

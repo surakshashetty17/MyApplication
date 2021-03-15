@@ -5,6 +5,7 @@ public class PagenationData
     private int item_id;
     private String item_proname;
     private String item_proprice;
+    private String item_image;
 
     public int getItem_id() {
         return item_id;
@@ -28,5 +29,13 @@ public class PagenationData
 
     public void setItem_proprice(String item_proprice) {
         this.item_proprice = item_proprice;
+    }
+
+    public String getItem_image() {
+        return item_image;
+    }
+
+    public void setItem_image(String item_image) {
+        this.item_image = item_image;
     }
 }
