@@ -31,7 +31,8 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".LocationActivity"></activity>
+        <activity android:name=".UploadImageActivity"></activity>
+        <activity android:name=".LocationActivity" />
         <activity android:name=".PageActivity" />
         <activity android:name=".PagenationDataActivity" />
         <activity android:name=".ProductActivity" />
@@ -138,14 +139,10 @@
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
             android:value="AIzaSyB38jEm6l1nbx8Tbr-l-Cz6Q6503xg1NYk" />
+
         <uses-library
             android:name="com.google.android.maps"
             android:required="true" />
-
-<!--        <meta-data-->
-<!--            android:name="com.google.android.geo.API_KEY"-->
-<!--            android:value="AIzaSyB38jEm6l1nbx8Tbr-l-Cz6Q6503xg1NYk" />-->
-
     </application>
 
 </manifest>

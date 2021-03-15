@@ -290,12 +290,12 @@
                     android:layout_marginRight="10dp"
                     android:text="Location" />
 
-<!--                <Button-->
-<!--                    android:id="@+id/user_page"-->
-<!--                    android:layout_width="130dp"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginLeft="10dp"-->
-<!--                    android:text="Pagenation" />-->
+                <Button
+                    android:id="@+id/main_uploadimage"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Image" />
 
             </LinearLayout>
 
