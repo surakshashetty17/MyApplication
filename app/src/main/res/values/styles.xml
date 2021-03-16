@@ -67,6 +67,7 @@
 
 
 
+<!--    This code is for changing text size-->
     <style name="BottomNavigationView">
         <item name="itemTextAppearanceActive">@style/TextAppearance.BottomNavigationView.Active</item>
         <item name="itemTextAppearanceInactive">@style/TextAppearance.BottomNavigationView.Inactive</item>

@@ -52,7 +52,7 @@ public class HomeActivity extends AppCompatActivity {
 //                }
                 switch (item.getItemId()) {
                     case R.id.nav_home:
-                        fragment = new HomeFragment();
+                        fragment = new HomeMainFragment();
                         break;
                     case R.id.nav_shop:
                         fragment = new MyAccountFragment();

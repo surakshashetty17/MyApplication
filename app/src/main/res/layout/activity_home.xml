@@ -7,20 +7,74 @@
     tools:context=".HomeActivity">
 
 
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:gravity="top"-->
+<!--        android:layout_marginTop="5dp"-->
+<!--        tools:ignore="MissingConstraints">-->
+
+<!--        <ImageView-->
+<!--            android:layout_width="50dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:background="@drawable/nanocartlogo"/>-->
+
+<!--&lt;!&ndash;        <View&ndash;&gt;-->
+<!--&lt;!&ndash;            android:id="@+id/view1"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="45dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_alignParentTop="true"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:background="#FFFFFF"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_marginTop="5dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_marginLeft="5dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_marginRight="5dp"/>&ndash;&gt;-->
+
+<!--        <SearchView-->
+<!--            android:id="@+id/searchView1"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginLeft= "10dp"-->
+<!--            android:layout_toLeftOf="@+id/imageButton1"-->
+<!--            android:background="@drawable/edittext"-->
+<!--            android:layout_marginRight="50dp"/>-->
+
+<!--        <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:gravity="right"-->
+<!--            android:layout_marginLeft="-50dp"-->
+<!--        android:layout_gravity="center">-->
+
+<!--        <ImageView-->
+<!--            android:layout_width="40dp"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:background="@drawable/notification"-->
+<!--            android:layout_gravity="right"-->
+<!--            android:layout_marginRight="5dp"/>-->
+<!--    </LinearLayout>-->
+
+
+<!--    </LinearLayout>-->
     <FrameLayout
+        android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/container">
+        tools:layout_editor_absoluteX="-16dp"
+        tools:layout_editor_absoluteY="-16dp">
+        <!--        android:layout_marginTop="60dp"-->
+
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottom_navigation"
+            style="@style/BottomNavigationView"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_gravity="bottom"
             android:background="@drawable/edittext"
             app:itemIconTint="@drawable/nav_selector"
             app:itemTextColor="@drawable/nav_selector"
-            style="@style/BottomNavigationView"
-            app:menu="@menu/activity_dash_drawer"
-            app:labelVisibilityMode="labeled"/>
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/activity_dash_drawer" />
     </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
