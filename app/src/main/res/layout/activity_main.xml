@@ -291,7 +291,7 @@
                     android:text="Location" />
 
                 <Button
-                    android:id="@+id/main_uploadimage"
+                    android:id="@+id/main_uploadimage100"
                     android:layout_width="130dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"

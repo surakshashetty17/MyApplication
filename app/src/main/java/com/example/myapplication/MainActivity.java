@@ -210,7 +210,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        buttonuploadimage = (Button)findViewById(R.id.main_uploadimage);
+        buttonuploadimage = (Button)findViewById(R.id.main_uploadimage100);
         buttonuploadimage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

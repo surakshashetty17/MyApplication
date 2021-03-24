@@ -6,13 +6,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.media.MediaScannerConnection;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.util.Base64;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -44,6 +47,9 @@ public class UploadImageActivity extends AppCompatActivity {
     private int GALLERY = 1, CAMERA = 2;
     private int clickImage;
     private RequestQueue requestQueue;
+//    Bitmap bitmap,thumbnail;
+    Button upload;
+//    String path;
 
 
     @Override
@@ -60,6 +66,8 @@ public class UploadImageActivity extends AppCompatActivity {
                 showPictureDialog();
             }
         });
+//        upload = (Button)findViewById(R.id.buttonupload_image100);
+//        uploadimage(path);
 
     }
 
@@ -110,15 +118,16 @@ public class UploadImageActivity extends AppCompatActivity {
             return;
         }
                 if (requestCode == GALLERY) {
-                    if (data != null) {
                         Uri contentURI = data.getData();
                         try {
-                            Bitmap bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), contentURI);
+                            Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), contentURI);
+//                            bitmap = BitmapFactory.decodeFile("/path/to/image.jpg");
                             String path = saveImage(bitmap);
                             Toast.makeText(UploadImageActivity.this, "Image uploaded successfully!", Toast.LENGTH_SHORT).show();
 
                             imageView.setImageBitmap(bitmap);
-                            SendImage(path);
+//                            System.out.println(path);
+                            uploadimage(path);
 
 //                            try {
 //                                Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), contentURI);
@@ -137,14 +146,13 @@ public class UploadImageActivity extends AppCompatActivity {
                         } catch (IOException e) {
                             e.printStackTrace();
                             Toast.makeText(UploadImageActivity.this, "Failed!", Toast.LENGTH_SHORT).show();
-                        }
                     }
 
                 } else if (requestCode == CAMERA) {
                     Bitmap thumbnail = (Bitmap) data.getExtras().get("data");
                     String path1 = saveImage(thumbnail);
                     imageView.setImageBitmap(thumbnail);
-                    SendImage(path1);
+                    uploadimage(path1);
                     Toast.makeText(UploadImageActivity.this, "Image uploaded successfully!", Toast.LENGTH_SHORT).show();
                 }
     }
@@ -159,51 +167,72 @@ public class UploadImageActivity extends AppCompatActivity {
 //    }
 
     public String saveImage(Bitmap myBitmap) {
-        ByteArrayOutputStream bytes = new ByteArrayOutputStream();
-        myBitmap.compress(Bitmap.CompressFormat.JPEG, 90, bytes);
-        File wallpaperDirectory = new File(
-                Environment.getExternalStorageDirectory() + IMAGE_DIRECTORY);
-        // have the object build the directory structure, if needed.
-        if (!wallpaperDirectory.exists()) {
-            wallpaperDirectory.mkdirs();
-        }
 
-        try {
-            File f = new File(wallpaperDirectory, Calendar.getInstance()
-                    .getTimeInMillis() + ".jpg");
-            f.createNewFile();
-            FileOutputStream fo = new FileOutputStream(f);
-            fo.write(bytes.toByteArray());
-            MediaScannerConnection.scanFile(this,
-                    new String[]{f.getPath()},
-                    new String[]{"image/jpeg"}, null);
-            fo.close();
-            Log.d("TAG", "File Saved::--->" + f.getAbsolutePath());
-            SendImage(f.getAbsolutePath());
-
-            return f.getAbsolutePath();
-        } catch (IOException e1) {
-            e1.printStackTrace();
-        }
-        return "";
+        Log.d("","hello000000000000000999999999999"+myBitmap);
+        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+//        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.instaimage);
+        myBitmap.compress(Bitmap.CompressFormat.JPEG, 100, byteArrayOutputStream);
+        byte[] imageBytes = byteArrayOutputStream.toByteArray();
+        String imageString = Base64.encodeToString(imageBytes, Base64.DEFAULT);
+                Log.d("/////////////","............,,,,,,,,,"+imageString);
+//                System.out.println(imageString);
+        return imageString;
+//        textView.setText(imageString);
+//        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+//        Log.d("/////////////","............,,,,,,,,,"+myBitmap);
+//        myBitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos);
+//        byte[] imageBytes = baos.toByteArray();
+//        String encodedImage = Base64.encodeToString(imageBytes, Base64.DEFAULT);
+//        Log.d("/////////////","............,,,,,,,,,"+encodedImage);
+////        SendImage(encodedImage);
+//        return encodedImage;
+//        ByteArrayOutputStream bytes = new ByteArrayOutputStream();
+//        myBitmap.compress(Bitmap.CompressFormat.JPEG, 90, bytes);
+//
+//
+//        File wallpaperDirectory = new File(
+//                Environment.getExternalStorageDirectory() + IMAGE_DIRECTORY);
+//        // have the object build the directory structure, if needed.
+//        if (!wallpaperDirectory.exists()) {
+//            wallpaperDirectory.mkdirs();
+//        }
+//
+//        try {
+//            File f = new File(wallpaperDirectory, Calendar.getInstance()
+//                    .getTimeInMillis() + ".jpg");
+//            f.createNewFile();
+//            FileOutputStream fo = new FileOutputStream(f);
+//            fo.write(bytes.toByteArray());
+//            MediaScannerConnection.scanFile(this,
+//                    new String[]{f.getPath()},
+//                    new String[]{"image/jpeg"}, null);
+//            fo.close();
+//
+//            Log.d("TAG", "File Saved::--->" + f.getAbsolutePath());
+//            SendImage(f.getAbsolutePath());
+//
+//            return f.getAbsolutePath();
+//        } catch (IOException e1) {
+//            e1.printStackTrace();
+//        }
+//        return "";
     }
 
-    private void SendImage(final String getimage)
+    private void uploadimage(final String getimage)
     {
+        Log.d("....////////..........",",,,,''''''''/'''''',,,,,,,,,,,");
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://13.232.113.112/nanocart_api/index.php/Api/nc_upload_image",
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://13.232.113.112/nanocart_api/index.php/Account/upload_image",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
+                        Log.d("....////////..........",",,,,''''''''/'''''',,,,,,,,,,,");
                         try {
 
                             JSONObject obj = new JSONObject(response);
-
-                            Log.d("str >>>>>>>>>>>>>>>>","..................."+response);
-                            int error = obj.getInt("status");
-                            if(error==1) {
+                            if (obj.getInt("status") == 1)
+                            {
                                 Toast.makeText(getApplicationContext(), obj.getString("message"), Toast.LENGTH_SHORT).show();
-
                             } else {
                                 Toast.makeText(getApplicationContext(), obj.getString("message"), Toast.LENGTH_SHORT).show();
                             }
@@ -223,8 +252,10 @@ public class UploadImageActivity extends AppCompatActivity {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> params  = new HashMap<>();
-                params.put("banner_img", getimage);
+                params.put("image_byte_array",getimage);
+                params.put("mobile", "8550838918");
                 params.put("signed_user_api_key", "25e4f5087d509d7b02487e181139bbdb1e2d63ecac57bb1a847a47469842a891");
+
                 return params;
             }
         };
@@ -233,45 +264,4 @@ public class UploadImageActivity extends AppCompatActivity {
         requestQueue.add(stringRequest);
     }
 
-
-//    private void SendImage( final String image) {
-//        final StringRequest File Saved = new StringRequest(Request.Method.POST, "URL",
-//                new Response.Listener<String>() {
-//                    @Override
-//                    public void onResponse(String response) {
-//                        Log.d("uploade",response);
-//                        try {
-//                            JSONObject jsonObject = new JSONObject(response);
-//
-//                        }
-//                    } catch (JSONException e) {
-//                        e.printStackTrace();
-//                    }
-//
-//                }
-//    },
-//            new Response.ErrorListener() {
-//        @Override
-//        public void onErrorResponse(VolleyError error) {
-//            Toast.makeText(Edit_Profile.this, "No internet connection", Toast.LENGTH_LONG).show();
-//
-//        }
-//    }) {
-//        @Override
-//        protected Map<String, String> getParams() throws AuthFailureError {
-//
-//            Map<String, String> params = new Hashtable<String, String>();
-//
-//            params.put("image", image);
-//            return params;
-//        }
-//    };
-//    {
-//        int socketTimeout = 30000;
-//        RetryPolicy policy = new DefaultRetryPolicy(socketTimeout, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
-//        stringRequest.setRetryPolicy(policy);
-//        RequestQueue requestQueue = Volley.newRequestQueue(this);
-//        requestQueue.add(stringRequest);
-//    }
-//}
 }

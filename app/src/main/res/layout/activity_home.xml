@@ -75,6 +75,54 @@
             app:itemIconTint="@drawable/nav_selector"
             app:itemTextColor="@drawable/nav_selector"
             app:labelVisibilityMode="labeled"
-            app:menu="@menu/activity_dash_drawer" />
+            app:menu="@menu/activity_dash_drawer" >
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="P"
+                    android:textSize="18sp"/>
+
+                <Switch
+                    android:id="@+id/simple_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:checked="false"
+                    android:textOff="Off"
+                    android:textOn="On"
+                    android:theme="@style/SCBSwitch"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="S"
+                    android:textSize="18sp"/>
+<!--                <Switch-->
+<!--                    android:id="@+id/simple_switch"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:checked="false"-->
+<!--                    android:textOff="Off"-->
+<!--                    android:textOn="On"-->
+<!--                    android:layout_marginTop="10dp"-->
+<!--                    android:theme="@style/SCBSwitch"/>-->
+
+
+            </LinearLayout>
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
     </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

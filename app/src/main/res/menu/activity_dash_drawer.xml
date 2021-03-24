@@ -12,8 +12,8 @@
             android:title="Shop" />
         <item
             android:id="@+id/nav_cart"
-            android:icon="@drawable/nanocartlogo"
-            android:title="Cart" />
+            android:icon="@drawable/white_image"
+            android:title="" />
         <item
             android:id="@+id/nav_wallets"
             android:icon="@drawable/hyperlocal"

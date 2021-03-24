@@ -9,7 +9,9 @@ import androidx.fragment.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.Switch;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
@@ -21,6 +23,7 @@ public class HomeActivity extends AppCompatActivity {
     FrameLayout frameLayout;
     FragmentManager fragmentManager;
     FragmentTransaction fragmentTransaction;
+    Switch simple_switch;
 
 
 
@@ -30,7 +33,7 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
         bottomNavigation = findViewById(R.id.bottom_navigation);
         frameLayout = (FrameLayout) findViewById(R.id.container);
-        fragment = new HomeFragment();
+        fragment = new HomeMainFragment();
         fragmentManager = getSupportFragmentManager();
         fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.container, fragment);
@@ -38,6 +41,24 @@ public class HomeActivity extends AppCompatActivity {
         fragmentTransaction.commit();
 
 
+        simple_switch = (Switch) findViewById(R.id.simple_switch);
+        simple_switch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+//                String statusSwitch1;
+                if (simple_switch.isChecked()) {
+                    fragment = new MyAccountFragment();                }
+                else {
+                    fragment = new HomeFragment();
+                }
+                FragmentManager fm = getSupportFragmentManager();
+                FragmentTransaction ft = fm.beginTransaction();
+                ft.replace(R.id.container, fragment);
+                ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+                ft.commit();
+            }
+        });
         bottomNavigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
